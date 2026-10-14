@@ -1,0 +1,4 @@
+D:\workbuddygongzuokongjian\2026-10-12-21-32-15\dem_pipeline\p17_ms_numbers.py:4: SyntaxWarning: invalid escape sequence '\s'
+  从 out/ 的中间产物（全部由 p2–p16 从 D:\shujuku 计算落盘）重新汇总，
+补算 ADL / IADL 单独入模 ...
+写出 out/_ms_numbers.csv，共 852 个数字

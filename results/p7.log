@@ -1,0 +1,82 @@
+======================================================================
+# CHARLS
+  基线 n=9920 事件=1539 dm2均值=0.52 抑郁=36.2%
+      [med_diff] dur=T medcol=dep  n=8547 ev=1372  β_total=0.1056 β_direct=0.0556 β_indirect=0.0500 prop=0.4733
+  ① 截面: tot=1.111 dir=1.057 ind=1.051 prop=0.473 (se 2.431)
+      [med_diff] dur=T1 medcol=dep1  n=7318 ev=1015  β_total=0.1411 β_direct=0.1090 β_indirect=0.0321 prop=0.2273
+  ② 时序(w2): tot=1.152 dir=1.115 ind=1.033 prop=0.227 (中介=dep1)
+      [g-formula] Y00=0.06917 Y01=0.07904 Y10=0.08194 Y11=0.08717 | TE=0.01799 NDE=0.01277 NIE=0.00523 PM=0.2920 (n=8547)
+  ③ g-formula: Y(0,0)=0.0692 Y(1,1)=0.0872 TE=0.0180 NDE=0.0128 NIE=0.0052 PM=0.292
+======================================================================
+# ELSA
+  基线 n=8848 事件=1619 dm2均值=0.52 抑郁=15.3%
+      [med_diff] dur=T medcol=dep  n=7010 ev=1279  β_total=0.1978 β_direct=0.1509 β_indirect=0.0468 prop=0.2368
+  ① 截面: tot=1.219 dir=1.163 ind=1.048 prop=0.237 (se 0.077)
+      [med_diff] dur=T1 medcol=dep1  n=6039 ev=1065  β_total=0.2040 β_direct=0.1637 β_indirect=0.0403 prop=0.1975
+  ② 时序(w2): tot=1.226 dir=1.178 ind=1.041 prop=0.197 (中介=dep1)
+      [g-formula] Y00=0.04240 Y01=0.04671 Y10=0.05648 Y11=0.05945 | TE=0.01705 NDE=0.01408 NIE=0.00296 PM=0.1760 (n=7010)
+  ③ g-formula: Y(0,0)=0.0424 Y(1,1)=0.0594 TE=0.0170 NDE=0.0141 NIE=0.0030 PM=0.176
+======================================================================
+# HRS
+  基线 n=14667 事件=3884 dm2均值=0.62 抑郁=14.3%
+      [med_diff] dur=T medcol=dep  n=14360 ev=3803  β_total=0.2731 β_direct=0.2443 β_indirect=0.0288 prop=0.1054
+  ① 截面: tot=1.314 dir=1.277 ind=1.029 prop=0.105 (se 0.020)
+      [med_diff] dur=T1 medcol=dep1  n=13335 ev=3453  β_total=0.2811 β_direct=0.2558 β_indirect=0.0253 prop=0.0900
+  ② 时序(w6): tot=1.325 dir=1.291 ind=1.026 prop=0.090 (中介=dep1)
+      [g-formula] Y00=0.03119 Y01=0.03336 Y10=0.04111 Y11=0.04253 | TE=0.01134 NDE=0.00991 NIE=0.00143 PM=0.1216 (n=14360)
+  ③ g-formula: Y(0,0)=0.0312 Y(1,1)=0.0425 TE=0.0113 NDE=0.0099 NIE=0.0014 PM=0.122
+======================================================================
+# KLoSA
+  基线 n=6183 事件=783 dm2均值=0.34 抑郁=28.5%
+      [med_diff] dur=T medcol=dep  n=6055 ev=744  β_total=0.2041 β_direct=0.1531 β_indirect=0.0510 prop=0.2498
+  ① 截面: tot=1.226 dir=1.165 ind=1.052 prop=0.250 (se 0.242)
+      [med_diff] dur=T1 medcol=dep1  n=5578 ev=583  β_total=0.2209 β_direct=0.1243 β_indirect=0.0966 prop=0.4372
+  ② 时序(w4): tot=1.247 dir=1.132 ind=1.101 prop=0.437 (中介=dep1)
+      [g-formula] Y00=0.02306 Y01=0.03105 Y10=0.03540 Y11=0.03729 | TE=0.01423 NDE=0.01234 NIE=0.00188 PM=0.1358 (n=6055)
+  ③ g-formula: Y(0,0)=0.0231 Y(1,1)=0.0373 TE=0.0142 NDE=0.0123 NIE=0.0019 PM=0.136
+======================================================================
+# MHAS
+  基线 n=11234 事件=1159 dm2均值=0.52 抑郁=31.2%
+      [med_diff] dur=T medcol=dep  n=10043 ev=946  β_total=0.2832 β_direct=0.2476 β_indirect=0.0356 prop=0.1258
+  ① 截面: tot=1.327 dir=1.281 ind=1.036 prop=0.126 (se 1.042)
+      [med_diff] dur=T1 medcol=dep1  n=7934 ev=499  β_total=0.2761 β_direct=0.2472 β_indirect=0.0290 prop=0.1050
+  ② 时序(w4): tot=1.318 dir=1.280 ind=1.029 prop=0.105 (中介=dep1)
+      [g-formula] Y00=0.03755 Y01=0.04131 Y10=0.05127 Y11=0.05362 | TE=0.01607 NDE=0.01373 NIE=0.00234 PM=0.1480 (n=10043)
+  ③ g-formula: Y(0,0)=0.0375 Y(1,1)=0.0536 TE=0.0161 NDE=0.0137 NIE=0.0023 PM=0.148
+======================================================================
+# SHARE
+  基线 n=21015 事件=2201 dm2均值=0.37 抑郁=23.6%
+      [med_diff] dur=T medcol=dep  n=20750 ev=2153  β_total=0.2769 β_direct=0.2300 β_indirect=0.0469 prop=0.1692
+  ① 截面: tot=1.319 dir=1.259 ind=1.048 prop=0.169 (se 0.036)
+      [med_diff] dur=T1 medcol=dep1  n=15182 ev=1656  β_total=0.3006 β_direct=0.2325 β_indirect=0.0681 prop=0.2265
+  ② 时序(w2): tot=1.351 dir=1.262 ind=1.070 prop=0.227 (中介=dep1)
+      [g-formula] Y00=0.01170 Y01=0.01325 Y10=0.01660 Y11=0.01761 | TE=0.00591 NDE=0.00490 NIE=0.00101 PM=0.1692 (n=20750)
+  ③ g-formula: Y(0,0)=0.0117 Y(1,1)=0.0176 TE=0.0059 NDE=0.0049 NIE=0.0010 PM=0.169
+
+======================================================================
+# 合并：总效应 / 直接效应 / 间接效应 与 中介比例
+  [pool] cross-sectional k=6  逐队列系数（log 尺度）:
+        CHARLS   β_total=0.1056  β_direct=0.0556  β_indirect=0.0500
+        ELSA     β_total=0.1978  β_direct=0.1509  β_indirect=0.0468
+        HRS      β_total=0.2731  β_direct=0.2443  β_indirect=0.0288
+        KLoSA    β_total=0.2041  β_direct=0.1531  β_indirect=0.0510
+        MHAS     β_total=0.2832  β_direct=0.2476  β_indirect=0.0356
+        SHARE    β_total=0.2769  β_direct=0.2300  β_indirect=0.0469
+  cross-sectional  total HR      k=6 1.254 (1.185-1.327) I2=69.9%
+  cross-sectional  direct HR     k=6 1.202 (1.130-1.278) I2=73.5%
+  cross-sectional  indirect HR   k=6 1.042 (1.032-1.053) I2=33.9%
+  cross-sectional  mediated %    k=6 12.7% (9.3-16.0) I2=0.0%
+  [pool] temporal k=6  逐队列系数（log 尺度）:
+        CHARLS   β_total=0.1411  β_direct=0.1090  β_indirect=0.0321
+        ELSA     β_total=0.2040  β_direct=0.1637  β_indirect=0.0403
+        HRS      β_total=0.2811  β_direct=0.2558  β_indirect=0.0253
+        KLoSA    β_total=0.2209  β_direct=0.1243  β_indirect=0.0966
+        MHAS     β_total=0.2761  β_direct=0.2472  β_indirect=0.0290
+        SHARE    β_total=0.3006  β_direct=0.2325  β_indirect=0.0681
+  temporal         total HR      k=6 1.274 (1.211-1.340) I2=51.2%
+  temporal         direct HR     k=6 1.217 (1.154-1.284) I2=53.6%
+  temporal         indirect HR   k=6 1.049 (1.028-1.070) I2=79.5%
+  temporal         mediated %    k=6 16.7% (8.0-25.4) I2=52.6%
+  counterfactual   mediated %    k=6 17.4%
+
+DONE

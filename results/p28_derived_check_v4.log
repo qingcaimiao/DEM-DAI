@@ -1,0 +1,24 @@
+派生表述                                   | 回源公式与算得值                                       | 稿件中检索到的字符串                                     | 结果
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+每个额外综合征风险高 27 %                        | round(100*(pool_M2_hr-1)) = 27                 | 27 % higher risk of dementia                   | HIT
+三综合征组风险高 64 %                          | round(100*(grad3_hr-1)) = 64                   | at 64 % higher risk                            | HIT
+分类梯度 1/2/3 vs 0 的点估计与上界                | grad1_hr, grad2_hr, grad3_hr, grad3_hi         | 1 syndrome 1.05; 2 syndromes 1.34; 3 syndromes | HIT
+抑郁 vs 非抑郁负担绝对风险差为 1.8 倍                | cf_dep_delta / cf_burden_delta = 1.8101        | a 1.8-fold difference                          | HIT
+4 组 5 年风险 3.58 / 4.37 / 5.01 / 6.10 %  | cf_risk_none / cf_risk_burden / cf_risk_dep / cf_risk_both | 3.58 % in participants with neither            | HIT
+抑郁 +1.43 百分点 / 负担 +0.79 百分点            | cf_dep_delta, cf_burden_delta                  | accounted for +1.43 percentage points and non- | HIT
+纯间接成分占间接效应约 84 %                       | 100*fway_pie/fway_nie = 83.7                   | 84 %)                                          | HIT
+中介比例收敛区间（比例口径）                         | med_pct_min–med_pct_max = 12.7–17.4            | 12.7–17.4 % when cohort-specific proportions a | HIT
+中介比例区间（比值口径）                           | med_ratio_min–med_ratio_max = 18.8–18.9        | 18.8–18.9 % when the fraction is taken from th | HIT
+时序框架 I²                                | med_tp_pct_I2 = 52.6                           | I² = 52.6 % for the temporally ordered framewo | HIT
+主模型 I²                                 | pool_M2_I2 = 76.8                              | I² = 76.8 %)                                   | HIT
+事件占比与发病密度                              | event_pct / incidence_density                  | 11,185 incident dementia cases (15.6 %; incide | HIT
+DAI 分层年龄跨度 62.2→67.7                   | dai0_age → dai3_age                            | mean age rose from 62.2 to 67.7 years          | HIT
+慢病数 0.4→2.7                            | dai0_nchron → dai3_nchron                      | the mean number of chronic conditions from 0.4 | HIT
+低教育 47.9→78.9 %                        | dai0_lowedu_pct → dai3_lowedu_pct              | from 47.9 % to 78.9 %                          | HIT
+发病密度 11.7→32.3                         | dai0_density → dai3_density                    | from 11.7 to 32.3 per 1,000 person-years       | HIT
+填补缺口 5,102 人 / 7.1 %                   | n_missing_cov / miss_pct                       | recovered the 5,102 participants               | HIT
+多个填补方案最大差 0.0043                       | mice_maxdiff                                   | within 0.0043 on the hazard-ratio scale        | HIT
+判别力差 ΔC                                | c_delta = -0.0016                              | ΔC = -0.0016                                   | HIT
+E-value 下限                             | evalue_M2_ci = 1.71                            | E-value of 1.71 for the lower confidence limit | HIT
+
+未命中 0 / 20

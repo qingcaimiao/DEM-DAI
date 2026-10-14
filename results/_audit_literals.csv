@@ -1,0 +1,8 @@
+﻿script,line,value,code
+p12_outcomes.py,2,8.2,"""""""p12_outcomes.py —— 替代结局与保守截尾（Table 4B / §8.2 的数据源）"
+p12_outcomes.py,3,1.5,① dem_alg      ：非教育分层 z ≤ −1.5（来自 p2）
+p12_outcomes.py,4,1.5,② dem_alg25    ：25 分量表（记忆 0–20 + 连续减 7 0–5），教育分层参考，≤ −1.5
+p12_outcomes.py,71,1.5,c['dem_alg25'] = (z25 <= -1.5).astype(float).where(z25.notna())
+p14_cindex.py,2,5.4,"""""""p14_cindex.py —— 判别力与主成分加权（§5.4/5.5 的数据源）"
+p14_cindex.py,2,5.5,"""""""p14_cindex.py —— 判别力与主成分加权（§5.4/5.5 的数据源）"
+p14_cindex.py,102,1.5,"stable = PC[(PC['hr'].apply(lambda v: abs(np.log(max(v, 1e-9))) < 1) & (PC['se'] < 1.5))]"

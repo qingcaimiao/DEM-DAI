@@ -1,0 +1,135 @@
+整段已替换： * Corresponding author: Renjie Zhang, Department of Cardiology, Handan
+整段已替换： Tables: 10 main (Tables 1, 2A, 2B, 3A, 3B, 3C, 4A, 4B, 4C, 4D); 17 sup
+整段已替换： Funding. This research received no specific grant from any funding age
+整段已替换： Authors' contributions. QM and RZ conceived and designed the study. QM
+整段已替换： Acknowledgements. This analysis uses data from the Gateway to Global A
+已在 ref 38 之后追加 3 条参考文献（39-41）
+已插入段落： The trajectory contrast is deliberately dichotomous — any burden
+已插入段落： The six modifiers and the four nested main models were fixed bef
+已插入段落： Following the harmonized files, the Katz items are reproduced as
+已插入段落： Table S7 Exposure trajectory-specific incidence densities by coh
+已插入段落： Depression and cognitive impairment are deliberately excluded fr
+摘要词数 = 349   正文词数 = 10904
+原 _ms_new 已改名留痕： D:\workbuddygongzuokongjian\2026-10-12-21-32-15\_ms_new_bak1791893539
+写出 D:/桌面/AIzuopin/痴呆/稿件正文_修订版_20261013.docx
+写出 _revised_text.txt，段落 233
+
+---- 规则命中统计 ----
+  v 结果：中介收敛（须先于表体规则）               x1
+  v 结果：路径 a（须先于表体规则）               x1
+  v 表4A 注：区间措辞（须先于表体规则）            x1
+  v T：标题样本量                        x1
+  v 背景末段：样本量                       x1
+  v 摘要：Methods 压缩                  x1
+  v 摘要：Results 压缩                  x1
+  v 方法：分析样本                        x1
+  v 方法：抑郁量表口径（原稿与数据及补充材料不符）        x1
+  v 方法：认知域集逐库锁定                    x1
+  v 方法：M4 可得性                      x1
+  v 方法：缺失数据                        x1
+  v 结果：样本特征                        x1
+  v 结果：逐库密度                        x1
+  v 结果：主关联                         x1
+  v 结果：分类梯度                        x1
+  v 结果：组分单独                        x1
+  v 结果：互调                          x1
+  v 结果：八类                          x1
+  v 结果：判别力与 PC1                    x1
+  v 结果：时距 run0                     x1
+  v 结果：时距 run1（改写卖点）               x1
+  v 结果：时距 run2                     x1
+  v 结果：时距等价性                       x1
+  v 结果：区间设计 run0                   x1
+  v 结果：区间设计 run1                   x1
+  v 结果：区间设计 run2                   x1
+  v 结果：时变聚类稳健                      x1
+  v 结果：时变排除者（原 2,599 人一说在重建数据中不成立） x1
+  v 结果：轨迹                          x1
+  v 结果：水平 vs 变化                    x1
+  v 结果：竞争风险                        x1
+  v 结果：替代结局与留一                     x1
+  v 结果：两次连续确认                      x1
+  v 结果：E-value                     x1
+  v 结果：区域                          x1
+  v 结果：随机效应敏感性 + meta-regression   x1
+  v 结果：亚组概述                        x1
+  v 图4题注                           x2
+  v 结果：交互（基线认知由显著改不显著）             x1
+  v 结果：性别/教育/BMI                   x1
+  v 结果：MICE                        x1
+  v 讨论：开篇                          x1
+  v 讨论：与 frailty 文献比较              x1
+  v 讨论：ΔC                          x1
+  v 讨论：与 Du/Ding 比较                x1
+  v 讨论：组分范围                        x1
+  v 讨论：多病比较                        x1
+  v 讨论：八类发现                        x1
+  v 讨论：机制（措辞微调）                    x1
+  v 讨论：抑郁角色                        x1
+  v 讨论：轨迹临床含义                      x1
+  v 讨论：效应修饰（删去基线认知论据）              x1
+  v 讨论：年龄交互的竞争风险说明（含婚姻检测偏倚）        x1
+  v 结论段                            x1
+  v 结论段：软化成本与临床用途                  x1
+  v 图1题注 x2                        x2
+  v 图2题注 x2                        x2
+  v 图3题注 x2                        x4
+  v 图3题注 x2                        x4
+  v 表4A 总效应                        x1
+  v 表4A 直接效应                       x1
+  v 表4A 间接效应                       x1
+  v 表4A 比例                         x1
+  v 表4A 比值口径                       x1
+  v 表4A 时序总效应                      x1
+  v 表4A 时序直接                       x1
+  v 表4A 时序间接                       x1
+  v 表4A 时序比例                       x1
+  v 表4A 时序比值                       x1
+  v 表4A 反事实 总                      x1
+  v 表4A 反事实 直接                     x1
+  v 表4A 反事实 间接                     x1
+  v 表4A 反事实 比例                     x1
+  v 表4A 反事实 比值                     x1
+  v 补充表清单（不再与 S7 合并）               x1
+  v 表4A 注：删去不可复算的「对应风险比」子句         x1
+  v 结果：中介敏感性 + 四向分解                x1
+  v 结果：交互尺度                        x1
+  v 结果：反事实绝对风险                     x1
+  v 讨论：四向分解                        x1
+  v 讨论：与 Ding 交互比较                 x1
+  v 讨论：四向分解（保留）                    x1
+  v 结果：单组分去嵌套                      x1
+  v 结果：ADL/IADL 去嵌套                x1
+  v 结果：互调去嵌套                       x1
+  v 结果：水平同入去嵌套                     x1
+  v 表4A 反事实 β-总                    x1
+  v 表4A 反事实 β-直接                   x1
+  v 表4A 反事实 β-间接                   x1
+  v 结果：交互尺度（AP 用百分数）               x1
+  v 讨论：交互尺度（AP 用百分数）               x1
+  v 方法：删去未重建的传统模型 ΔC 比较            x1
+  v 方法：删去未重建的宽松抑郁阈值                x1
+  v 方法：RERI 变体数改为可复算口径             x1
+  v 方法：稳定性守卫改为实际发生的口径              x1
+  v 题头：去掉 markdown 转义反斜杠（投稿硬指标：document.xml 反斜杠 = 0） x1
+  v 引言：创新性表述改为可核实的事实口径             x1
+  v 讨论：与 2026 年三篇近邻的对照（补引 39-41）   x1
+  v 题头：作者名单                        x1
+  v 题头：单位 1                        x1
+  v 题头：单位 2                        x1
+  v Declarations：伦理                x1
+  v 投稿前：组分序位的符号改措辞                 x1
+  v 投稿前：S6→S7 交叉引用更正               x1
+  v 数据可得性：脚本归档                     x1
+  v 摘要：删去 at no cost               x1
+  v 摘要：两次连续确认                      x1
+  v 参考文献 7 更新为正式卷页                 x1
+  v P1-6 MHAS 分离点名                 x1
+  v P1-7 线性假设说明                    x1
+  v P1-11 加性尺度交互                   x1
+  v P1-12 竞争风险为次要分析                x1
+  v 表4A 截面行 I² (k) 单元格             x1
+  v 表4A 时序行 I² (k) 单元格             x1
+  v 表4A 反事实行 k 单元格                 x1
+
+未命中规则数 = 0

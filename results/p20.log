@@ -1,0 +1,101 @@
+      [FP:Fig2A] k=10
+        CHARLS (China)                             HR=1.1413 (1.0787-1.2074) pooled=False
+        ELSA (England)                             HR=1.2460 (1.1683-1.3288) pooled=False
+        HRS (USA)                                  HR=1.2888 (1.2387-1.3410) pooled=False
+        KLoSA (Korea)                              HR=1.4274 (1.3064-1.5596) pooled=False
+        MHAS (Mexico)                              HR=1.2589 (1.1756-1.3482) pooled=False
+        SHARE (Europe)                             HR=1.2879 (1.2280-1.3508) pooled=False
+        Pooled M1                                  HR=1.4876 (1.3778-1.6063) pooled=True
+        Pooled M2                                  HR=1.2670 (1.2066-1.3305) pooled=True
+        Pooled M3                                  HR=1.2660 (1.1826-1.3553) pooled=True
+        Pooled M4                                  HR=1.2083 (1.1101-1.3151) pooled=True
+      [FP:Fig2B] k=9
+        CHARLS (China)                             HR=1.2295 (1.0162-1.4877) pooled=False
+        ELSA (England)                             HR=1.5421 (1.2212-1.9472) pooled=False
+        HRS (USA)                                  HR=1.9037 (1.6572-2.1868) pooled=False
+        KLoSA (Korea)                              HR=1.8608 (1.3335-2.5968) pooled=False
+        MHAS (Mexico)                              HR=1.7748 (1.4487-2.1744) pooled=False
+        SHARE (Europe)                             HR=1.6841 (1.4356-1.9756) pooled=False
+        Pooled: 1 syndrome                         HR=1.0495 (0.9674-1.1384) pooled=True
+        Pooled: 2 syndromes                        HR=1.3395 (1.2581-1.4261) pooled=True
+        Pooled: 3 syndromes                        HR=1.6446 (1.4341-1.8861) pooled=True
+      [FP:Fig2C] k=8
+        All three syndromes                        HR=1.6446 (1.4341-1.8861) pooled=True
+        Disability + depression                    HR=1.4878 (1.3628-1.6242) pooled=True
+        Multimorbidity + depression                HR=1.2667 (1.1347-1.4140) pooled=True
+        Depression only                            HR=1.1418 (0.9685-1.3462) pooled=True
+        Disability only                            HR=1.2034 (1.1043-1.3114) pooled=True
+        Disability + multimorbidity                HR=1.1141 (0.9506-1.3056) pooled=True
+        Multimorbidity only                        HR=0.8941 (0.8149-0.9810) pooled=True
+        None of the three (reference)              HR=1.0000 (1.0000-1.0000) pooled=False
+      [FP:Fig2D] k=7
+        Cross-sectional difference                 HR=12.6847 (9.3232-16.0463) pooled=True
+        Temporally ordered difference              HR=16.7238 (8.0431-25.4044) pooled=True
+        Counterfactual g-formula                   HR=17.3780 (12.4670-22.2890) pooled=True
+            Two-wave washout (from w2)             HR=14.3130 (5.0086-23.6174) pooled=False
+            Mediator: incident depression          HR=8.5659 (2.1944-14.9375) pooled=False
+            With exposure-by-mediator interaction  HR=19.3783 (11.6992-27.0575) pooled=False
+            Exposure: multimorbidity only          HR=9.4726 (5.4393-13.5058) pooled=False
+      [FP:Fig3A] k=21
+            CHARLS (China)                         HR=1.1183 (1.0367-1.2064) pooled=False
+            ELSA (England)                         HR=1.3699 (1.2860-1.4592) pooled=False
+            HRS (USA)                              HR=1.3949 (1.3592-1.4315) pooled=False
+            KLoSA (Korea)                          HR=1.5452 (1.4319-1.6675) pooled=False
+            MHAS (Mexico)                          HR=1.2136 (1.1351-1.2975) pooled=False
+            SHARE (Europe)                         HR=1.4110 (1.3644-1.4592) pooled=False
+        Pooled: time-varying (1 wave)              HR=1.3383 (1.2532-1.4292) pooled=True
+            CHARLS (China)                         HR=1.2359 (1.1029-1.3850) pooled=False
+            ELSA (England)                         HR=1.3802 (1.2885-1.4785) pooled=False
+            HRS (USA)                              HR=1.3511 (1.3116-1.3918) pooled=False
+            KLoSA (Korea)                          HR=1.3709 (1.2439-1.5110) pooled=False
+            MHAS (Mexico)                          HR=1.2088 (1.1184-1.3065) pooled=False
+            SHARE (Europe)                         HR=1.3757 (1.3116-1.4429) pooled=False
+        Pooled: lagged (2 waves)                   HR=1.3319 (1.2820-1.3839) pooled=True
+            CHARLS (China)                         HR=1.1479 (1.0599-1.2432) pooled=False
+            ELSA (England)                         HR=1.4800 (1.3777-1.5898) pooled=False
+            HRS (USA)                              HR=1.4796 (1.4371-1.5232) pooled=False
+            KLoSA (Korea)                          HR=1.5913 (1.4624-1.7316) pooled=False
+            MHAS (Mexico)                          HR=1.3142 (1.2145-1.4220) pooled=False
+            SHARE (Europe)                         HR=1.4481 (1.3968-1.5012) pooled=False
+        Pooled: cumulative mean                    HR=1.4065 (1.3156-1.5036) pooled=True
+      [Fig3B] persistently low 密度=11.8 (n=22573, 事件=2436); remitted 密度=16.2 (n=4585, 事件=596); incident 密度=17.8 (n=7278, 事件=1046); persistently affected 密度=24.9 (n=21424, 事件=4144)
+      [FP:Fig3C] k=22
+            CHARLS (China)                         HR=1.4459 (1.1430-1.8290) pooled=False
+            ELSA (England)                         HR=1.3177 (1.0617-1.6355) pooled=False
+            HRS (USA)                              HR=1.2025 (1.0648-1.3581) pooled=False
+            KLoSA (Korea)                          HR=1.7881 (1.3083-2.4439) pooled=False
+            MHAS (Mexico)                          HR=1.3637 (1.0461-1.7778) pooled=False
+            SHARE (Europe)                         HR=1.3328 (1.1242-1.5803) pooled=False
+        Pooled: Incident 0→1                       HR=1.3346 (1.2155-1.4653) pooled=True
+            CHARLS (China)                         HR=1.6886 (1.3541-2.1057) pooled=False
+            ELSA (England)                         HR=1.4020 (1.1182-1.7579) pooled=False
+            HRS (USA)                              HR=1.2405 (1.0326-1.4902) pooled=False
+            KLoSA (Korea)                          HR=1.2664 (0.8802-1.8220) pooled=False
+            MHAS (Mexico)                          HR=1.5375 (1.0435-2.2652) pooled=False
+            SHARE (Europe)                         HR=1.3395 (1.0651-1.6847) pooled=False
+        Pooled: Remitted 1→0                       HR=1.3909 (1.2592-1.5365) pooled=True
+            CHARLS (China)                         HR=1.5633 (1.3110-1.8640) pooled=False
+            ELSA (England)                         HR=1.6485 (1.4162-1.9189) pooled=False
+            HRS (USA)                              HR=1.3067 (1.2047-1.4173) pooled=False
+            KLoSA (Korea)                          HR=2.1676 (1.7152-2.7392) pooled=False
+            MHAS (Mexico)                          HR=1.5454 (1.2209-1.9561) pooled=False
+            SHARE (Europe)                         HR=1.7305 (1.5156-1.9758) pooled=False
+        Pooled: Persistently affected 1→1          HR=1.6190 (1.4016-1.8702) pooled=True
+        Persistently low 0→0 (reference)           HR=1.0000 (1.0000-1.0000) pooled=False
+      [FP:Fig3D] k=5
+        Baseline level (alone)                     HR=1.3011 (1.2280-1.3785) pooled=False
+        Follow-up level (alone)                    HR=1.3301 (1.2312-1.4370) pooled=False
+        Change, Δ (alone)                          HR=1.0603 (1.0123-1.1105) pooled=False
+        Baseline level (mutually adjusted)         HR=1.1368 (1.1017-1.1730) pooled=False
+        Follow-up level (mutually adjusted)        HR=1.2311 (1.1438-1.3251) pooled=False
+      [coef] Fig4/Age group HR < 65=1.3857; 65–74=1.2532; ≥ 75=1.2161
+      [coef] Fig4/Sex HR Women=1.2202; Men=1.2833
+      [coef] Fig4/Education HR Low=1.2665; Medium=1.3001; High=1.2862
+      [coef] Fig4/Baseline cognition HR Below median=1.1907; Above median=1.2174
+      [coef] Fig4/Marital status HR Not partnered=1.2174; Partnered=1.3063
+      [coef] Fig4/BMI HR < 25=1.2334; 25–29.9=1.2961; ≥ 30=1.2741
+Fig1.png (3848, 2944) aspect=1.307
+Fig2.png (4254, 3102) aspect=1.371
+Fig3.png (4505, 3576) aspect=1.260
+Fig4.png (4412, 3277) aspect=1.346
+done

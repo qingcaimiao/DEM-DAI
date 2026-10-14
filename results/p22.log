@@ -1,0 +1,89 @@
+## Table 1 Baseline characteristics of the 71,867 participants by number of geriatric syndromes
+
+| Participants, n | 36,266 | 22,617 | 9,705 | 3,279 | 71,867 |
+|---|---|---|---|---|---|
+| Person-years of follow-up | 370,468 | 215,797 | 82,104 | 25,936 | 694,305 |
+| Incident dementia cases, n | 4,349 | 3,922 | 2,075 | 839 | 11,185 |
+| Incidence density (per 1,000 person-years) | 11.7 | 18.2 | 25.3 | 32.3 | 16.1 |
+| Age, years | 62.2 | 65.2 | 67.0 | 67.7 | 64.0 |
+| Male, % | 49.8 | 41.7 | 34.0 | 28.8 | 44.1 |
+| Low education, % | 47.9 | 58.3 | 70.6 | 78.9 | 55.7 |
+| Partnered, % | 78.4 | 71.1 | 64.4 | 58.4 | 73.3 |
+| Current smoking, % | 20.1 | 17.6 | 17.2 | 15.8 | 18.7 |
+| Current drinking, % | 60.8 | 50.0 | 39.9 | 32.0 | 53.3 |
+| Body mass index, kg/m² | 25.9 | 26.6 | 27.1 | 28.1 | 26.4 |
+| Chronic conditions, n | 0.4 | 1.4 | 2.0 | 2.7 | 1.1 |
+
+*DAI, disability–multimorbidity–depression index; py, person-years. Values are means or percentages unless stated otherwise. The DAI counts how many of the three syndromes (disability, multimorbidity, depression) are present.*
+
+## Table 2A Association between the geriatric syndrome accumulation index and incident dementia: pooled models and cohort-specific estimates
+
+| Pooled (random effects) |  |  |  |  |  |  |
+|---|---|---|---|---|---|---|
+| Model | k | n | Events | HR (95 % CI) | P | I² (%) | τ² |
+| M1 | 6 | 71,867 | 11,185 | 1.49 (1.38–1.61) | < 0.001 | 93.0 | 0.0084 |
+| M2 | 6 | 66,765 | 10,297 | 1.27 (1.21–1.33) | < 0.001 | 76.8 | 0.0028 |
+| M3 | 5 | 58,912 | 8,948 | 1.27 (1.18–1.36) | < 0.001 | 86.2 | 0.0051 |
+| M4 | 3 | 29,005 | 3,218 | 1.21 (1.11–1.32) | < 0.001 | 71.4 | 0.0040 |
+| Cohort-specific M2 |  |  |  |  |  |  |
+| Cohort | n | Events | HR (95 % CI) | P |  |  |
+| CHARLS (China) | 8,547 | 1,372 | 1.14 (1.08–1.21) | < 0.001 |  |  |
+| ELSA (England) | 7,010 | 1,279 | 1.25 (1.17–1.33) | < 0.001 |  |  |
+| HRS (USA) | 14,360 | 3,803 | 1.29 (1.24–1.34) | < 0.001 |  |  |
+| KLoSA (Korea) | 6,055 | 744 | 1.43 (1.31–1.56) | < 0.001 |  |  |
+| MHAS (Mexico) | 10,043 | 946 | 1.26 (1.18–1.35) | < 0.001 |  |  |
+| SHARE (Europe) | 20,750 | 2,153 | 1.29 (1.23–1.35) | < 0.001 |  |  |
+
+*M1 unadjusted; M2 adjusted for age, age², sex, education, marital status, smoking, alcohol use and body mass index; M3 additionally adjusted for urban–rural residence; M4 additionally adjusted for grip strength and physical activity. Pooled estimates are DerSimonian–Laird random-effects estimates of the hazard ratio per one additional syndrome, with τ² on the log-hazard scale. Sample size differs by model because each model contributes its own complete cases for the covariates it requires. M1 requires no covariates and therefore uses all 71,867 participants with a complete exposure (11,185 events) — the same sample as Table 1 and the abstract; M2 and M3 use the 66,765 participants (10,297 events) with complete M2 covariates, i.e. 5,102 fewer participants, and M4 the 29,005 with complete grip-strength and physical-activity data.
+
+
+===== 对撞 47 项 =====
+T1_age_dai0: got=62.2000 ms=62.2000 OK (pooled Table1)
+T1_age_dai3: got=67.7000 ms=67.7000 OK (pooled Table1)
+T1_nchron_dai0: got=0.4000 ms=0.4000 OK (pooled Table1)
+T1_nchron_dai3: got=2.7000 ms=2.7000 OK (pooled Table1)
+T1_lowedu_dai0: got=47.9000 ms=47.9000 OK (pooled Table1)
+T1_lowedu_dai3: got=78.9000 ms=78.9000 OK (pooled Table1)
+T1_dens_dai0: got=11.7000 ms=11.7000 OK (pooled Table1)
+T1_dens_dai3: got=32.3000 ms=32.3000 OK (pooled Table1)
+T1_total_n: got=71867.0000 ms=71867.0000 OK (pooled Table1)
+T1_total_ev: got=11185.0000 ms=11185.0000 OK (pooled Table1)
+T1_total_py: got=694305.0000 ms=694305.0000 OK (pooled Table1)
+T2A_M1_hr: got=1.4876 ms=1.4876 OK (_pool)
+T2A_M2_hr: got=1.2670 ms=1.2670 OK (_pool)
+T2A_M3_hr: got=1.2660 ms=1.2660 OK (_pool)
+T2A_M4_hr: got=1.2083 ms=1.2083 OK (_pool)
+T2B_1_hr: got=1.0495 ms=1.0500 OK (_pool_2b)
+T2B_2_hr: got=1.3395 ms=1.3400 OK (_pool_2b)
+T2B_3_hr: got=1.6446 ms=1.6400 OK (_pool_2b)
+T3A_Disability: got=1.4692 ms=1.4700 OK (Table3A.csv)
+T3A_Multimorbidity: got=1.1631 ms=1.1600 OK (Table3A.csv)
+T3A_Depression: got=1.4997 ms=1.5000 OK (Table3A.csv)
+T3B_Disability: got=1.3634 ms=1.3600 OK (Table3B.csv)
+T3B_Multimorbidity: got=1.0684 ms=1.0700 OK (Table3B.csv)
+T3B_Depression: got=1.4353 ms=1.4400 OK (Table3B.csv)
+T3C_All three: got=1.6446 ms=1.6400 OK (_pool_3c)
+T3C_Disability+Depression: got=1.4878 ms=1.4900 OK (_pool_3c)
+T3C_Multimorbidity+Depression: got=1.2667 ms=1.2700 OK (_pool_3c)
+T3C_Depression only: got=1.1418 ms=1.1400 OK (_pool_3c)
+T3C_Disability only: got=1.2034 ms=1.2000 OK (_pool_3c)
+T3C_Disability+Multimorbidity: got=1.1141 ms=1.1100 OK (_pool_3c)
+T3C_Multimorbidity only: got=0.8941 ms=0.8900 OK (_pool_3c)
+T4D_primary_hr: got=1.2670 ms=1.2670 OK (_alt_pool vs _pool)
+T4D_primary_I2: got=76.8252 ms=76.8000 OK (_alt_pool vs _pool)
+T4D_primary_n: n=66765 事件=10297  [应为 M2 的 66,765 / 10,297]
+T4B_tw: pct=14.3 (5.0–23.6) I2=51.0  [Table 4B 源 _med_sens_pool.csv]
+T4B_ip: pct=8.6 (2.2–14.9) I2=35.0  [Table 4B 源 _med_sens_pool.csv]
+T4B_wi: pct=19.4 (11.7–27.1) I2=0.0  [Table 4B 源 _med_sens_pool.csv]
+T4B_mo: pct=9.5 (5.4–13.5) I2=0.0  [Table 4B 源 _med_sens_pool.csv]
+T4C_lag0: got=1.2670 ms=1.2700 OK (_lag_cum_pool)
+T4C_lag12: got=1.2678 ms=1.2700 OK (_lag_cum_pool)
+T4C_tv1: got=1.3383 ms=1.3400 OK (_tv_pool)
+T4C_tv2: got=1.3319 ms=1.3300 OK (_tv_pool)
+T4C_tvcum: got=1.4065 ms=1.4100 OK (_tv_pool)
+T4C_traj_inc: got=1.3346 ms=1.3300 OK (_traj_pool)
+T4C_traj_rem: got=1.3909 ms=1.3900 OK (_traj_pool)
+T4C_traj_pers: got=1.6190 ms=1.6200 OK (_traj_pool)
+traj density summary: persistently low=11.8; remitted=16.2; incident=17.8; persistently affected=24.9
+
+_tables.json 已写出：10 张

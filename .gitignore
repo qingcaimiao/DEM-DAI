@@ -1,0 +1,9 @@
+# participant-level derived data (not redistributable)
+*.parquet
+# local outputs / OS
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+*.tmp

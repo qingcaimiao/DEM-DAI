@@ -1,0 +1,27 @@
+组装区间数据 ...
+  完成
+  CHARLS done (6.0s)
+  ELSA done (7.5s)
+  HRS done (19.6s)
+  KLoSA done (3.2s)
+  MHAS done (4.1s)
+  SHARE done (38.2s)
+
+=== 时变模型：常规 vs 聚类稳健 ===
+-- time-varying (1 wave)
+  plain            k=5  HR=1.309 (1.234-1.387)  I2= 86.7%  区间=349597 事件=14344
+  cluster          k=5  HR=1.309 (1.232-1.391)  I2= 88.0%  区间=349597 事件=14344
+     逐队列 SE 比: CHARLS 0.97; ELSA 1.01; HRS 1.01; KLoSA 0.94; SHARE 0.99
+     中位 SE 比 0.995；个体 130300，区间 349597，事件 14344
+-- lagged (2 waves)
+  plain            k=6  HR=1.263 (1.208-1.320)  I2= 65.9%  区间=247632 事件=10931
+  cluster          k=6  HR=1.263 (1.207-1.321)  I2= 68.7%  区间=247632 事件=10931
+     逐队列 SE 比: CHARLS 0.97; ELSA 1.00; HRS 1.00; KLoSA 0.93; MHAS 0.96; SHARE 0.98
+     中位 SE 比 0.972；个体 99075，区间 247632，事件 10931
+-- cumulative mean
+  plain            k=5  HR=1.407 (1.317-1.504)  I2= 87.1%  区间=349597 事件=14344
+  cluster          k=5  HR=1.409 (1.315-1.508)  I2= 88.1%  区间=349597 事件=14344
+     逐队列 SE 比: CHARLS 0.98; ELSA 1.04; HRS 1.02; KLoSA 0.93; SHARE 0.98
+     中位 SE 比 0.985；个体 130300，区间 349597，事件 14344
+
+DONE p34

@@ -1,0 +1,30 @@
+① 时变暴露（区间设计，合并）:
+              variant  k       hr       lo       hi        I2  intervals
+      cumulative mean  6 1.406493 1.315642 1.503619 89.009313     370394
+     lagged (2 waves)  6 1.331932 1.281960 1.383851 54.574741     247632
+time-varying (1 wave)  6 1.338310 1.253194 1.429207 90.809427     370394
+
+② 轨迹发病密度（逐队列）:
+traj    incident  persistently affected  persistently low  remitted
+cohort                                                             
+CHARLS      15.3                   20.9               9.4      19.4
+ELSA        16.6                   26.9              12.1      17.9
+HRS         25.6                   30.7              18.5      24.7
+KLoSA       18.5                   27.6               8.8      13.0
+MHAS        24.2                   27.3              16.7      25.0
+SHARE       11.2                   16.7               6.4       8.3
+
+   轨迹 HR（合并）:
+                 traj  k       hr       lo       hi        I2
+             incident  6 1.334564 1.215515 1.465273 23.249315
+persistently affected  6 1.619018 1.401600 1.870163 81.348609
+             remitted  6 1.390945 1.259179 1.536501  1.592612
+
+③ 水平 vs 变化（合并）:
+   baseline level         d0        k=6 1.301 (1.228-1.378) I2=80.5%
+   baseline+follow-up     d0        k=6 1.137 (1.102-1.173) I2=0.0%
+   baseline+follow-up     d1        k=6 1.231 (1.144-1.325) I2=81.7%
+   change                 dchg      k=6 1.060 (1.012-1.110) I2=57.2%
+   follow-up level        d1        k=6 1.330 (1.231-1.437) I2=90.1%
+
+DONE

@@ -1,0 +1,39 @@
+外部意见回源核实 —— 稿件正文_修订稿_v4_20261013.docx
+==============================================================================
+  连续单字符数字串 4+（"1 1 1 1" 乱码）                      : 0
+  公式/对象/文本框/域（PDF 乱码来源）                          : 0
+  F (%) 表头                                       : 0
+  I² (%) 表头                                      : 12
+  KLoSAS                                         : 0
+  KLoS A                                         : 0
+  ndustd                                         : 0
+  "age, age,"（缺上标）                               : 0
+  multicolo(u)r                                  : 0
+  multichort                                     : 0
+  timevarying                                    : 0
+  fcaF222                                        : 0
+  fca422                                         : 0
+  j.jnh.2026（缺 a）                                : 0
+  "Every row is estimated on the same"           : 0
+  "No adjustment for multiple testing"           : 0
+  age²（上标）                                       : 4
+  multicohort                                    : 4
+  time-varying                                   : 13
+  fcaf222（Brain Commun 正确文章号）                    : 1
+  j.jnha.2026                                    : 1
+  M1 unadjusted                                  : 1
+  Benjamini–Hochberg procedure                   : 2
+  "1.05 (0.97"（分类梯度起点）                           : 2
+  "Qingcai Miao¹²"（作者上标）                         : 1
+  "factors — in particular"（破折号）                 : 1
+  Table 2B Categorical gradient（应=1）             : 1
+
+  tbl=10  blip=4  反斜杠=0  段落=811
+
+  image1 == 重绘图 OK
+  image2 == 重绘图 OK
+  image3 == 重绘图 OK
+  image4 == 重绘图 OK
+  ALL_IMAGE_OK = True
+
+  AF1 multichort=0 multicolo=0 ; SM multicolo=0

@@ -1,0 +1,7 @@
+﻿step,label,n,excluded
+1,Baseline respondents,103444,0
+2,Baseline cognitive assessment available,96019,7425
+3,Dementia-free at baseline,90884,5135
+4,Aged 50-105 years,84254,6630
+5,Survived to and assessed during follow-up,72107,12147
+6,Final analytic sample,71867,240

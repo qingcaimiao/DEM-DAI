@@ -1,0 +1,64 @@
+表注（第 64 个文档块）共 5 句
+    OK  | Note.
+    OK  | DAI, disability–multimorbidity–depression index;
+    OK  | py, person-years.
+    OK  | Values are means or percentages unless stated otherwise.
+    OK  | The DAI counts how many of the three syndromes (disability, multimorbidity, depression) are present.
+表注（第 70 个文档块）共 6 句
+    OK  | Note.
+    OK  | M1 unadjusted;
+    OK  | M2 adjusted for age, age², sex, education, marital status, smoking, alcohol use and body mass index;
+    OK  | M3 additionally adjusted for urban–rural residence;
+    OK  | M4 additionally adjusted for grip strength and physical activity.
+    OK  | Pooled estimates are DerSimonian–Laird random-effects estimates of the hazard ratio per one additional syndrome.
+表注（第 76 个文档块）共 4 句
+    OK  | Note.
+    OK  | Reference category: none of the three syndromes.
+    OK  | Model M2 covariate set.
+    OK  | Pooled estimates are DerSimonian–Laird random-effects estimates.
+表注（第 81 个文档块）共 5 句
+    OK  | Note.
+    OK  | Model M2 covariate set;
+    OK  | each component is entered on its own.
+    OK  | Within the disability construct, ADL limitation alone gave a pooled HR of 1.48 (1.35–1.61) and IADL limitation alone 1.49 (1.38–1.60) (pooled, DerSimo
+    OK  | Disability could not be estimated with a stable fit in MHAS and is left blank there.
+表注（第 85 个文档块）共 2 句
+    OK  | Note.
+    OK  | Model M2 covariate set with all three components entered together.
+表注（第 89 个文档块）共 3 句
+    OK  | Note.
+    OK  | Pooled DerSimonian–Laird random-effects estimates with the M2 covariate set.
+    OK  | k is the number of cohorts contributing to each contrast.
+表注（第 95 个文档块）共 4 句
+    OK  | Note.
+    OK  | All estimates are pooled DerSimonian–Laird random-effects hazard ratios per one additional syndrome (panels a–c and e) or per trajectory (panel d);
+    OK  | k is the number of contributing cohorts.
+    OK  | In panel (c) the number of person-intervals modelled was 370,394 (one wave), 247,632 (two waves) and 370,394 (cumulative mean).
+表注（第 106 个文档块）共 10 句
+    OK  | Note.
+    OK  | β is the pooled coefficient on the scale of the decomposition — the natural logarithm of the hazard ratio for the first two frameworks and the risk di
+    OK  | the effects on that row's own scale are given in the columns.
+    OK  | The total, direct and indirect effects are each pooled separately by random-effects meta-analysis, over every cohort in which the model was estimable 
+    OK  | The mediated proportion is the random-effects pooled average of the cohort-specific proportions, each computed within a cohort as (total − direct)/tot
+    OK  | only cohorts meeting the stability rule contribute to it, so its k may be smaller than the number of cohorts contributing to the effects, and it is th
+    OK  | The ratio of pooled effects, 1 − direct/total computed from the pooled coefficients, is given in the penultimate column so that the row can be reprodu
+    OK  | the two estimands differ because pooling a set of ratios and taking the ratio of two pooled estimates are not equivalent operations.
+    OK  | Both are reported, and both place the depression-mediated fraction between one-eighth and one-fifth of the total effect.
+    OK  | Cohort-specific coefficients and proportions are given in Additional file 1: Table S6.
+表注（第 111 个文档块）共 3 句
+    OK  | Note.
+    OK  | Pooled DerSimonian–Laird random-effects estimates with the M2 covariate set.
+    OK  | Mediated proportions are percentages of the total effect of non-depressive burden.
+
+表注未匹配数值：0
+表 1：单元格文本块 72，数值 token 61，未匹配 0
+表 2：单元格文本块 62，数值 token 67，未匹配 0
+表 3：单元格文本块 54，数值 token 84，未匹配 0
+表 4：单元格文本块 54，数值 token 75，未匹配 0
+表 5：单元格文本块 48，数值 token 67，未匹配 0
+表 6：单元格文本块 36，数值 token 38，未匹配 0
+表 7：单元格文本块 136，数值 token 181，未匹配 0
+表 8：单元格文本块 32，数值 token 36，未匹配 0
+表 9：单元格文本块 45，数值 token 48，未匹配 0
+
+未匹配合计：0

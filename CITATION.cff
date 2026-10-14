@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite both the manuscript and this archived release."
+title: "DEM-DAI: analysis code for cumulative burden of three geriatric syndromes and incident dementia"
+abstract: >-
+  Analysis code for a six-cohort harmonized study of a minimal three-component geriatric syndrome
+  accumulation index (disability, multimorbidity, depression) and incident dementia, including
+  time-lagged, time-varying, trajectory, competing-risk, mediation and E-value analyses.
+authors:
+  - family-names: Miao
+    given-names: Qingcai
+    orcid: "https://orcid.org/0009-0006-1479-6726"
+  - family-names: Cen
+    given-names: Jianhong
+  - family-names: Chen
+    given-names: Lu
+  - family-names: Lu
+    given-names: Runzhi
+  - family-names: Zhang
+    given-names: Renjie
+    orcid: "https://orcid.org/0009-0009-4026-2068"
+license: MIT
+version: 1.0.0
+date-released: "2026-10-14"

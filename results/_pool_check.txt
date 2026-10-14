@@ -1,0 +1,46 @@
+# p19 图表/表格聚合数据
+
+## 纳入流程
+
+| step | 阶段 | N | 排除 |
+|---|---|---|---|
+| 1 | Baseline respondents | 103,444 | 0 |
+| 2 | Baseline cognitive assessment available | 96,019 | 7,425 |
+| 3 | Dementia-free at baseline | 90,884 | 5,135 |
+| 4 | Aged 50-105 years | 84,254 | 6,630 |
+| 5 | Survived to and assessed during follow-up | 72,107 | 12,147 |
+| 6 | Final analytic sample | 71,867 | 240 |
+
+## 轨迹发病密度（合并）
+
+| trajectory | n | events | person-years | density (/1000 py) | cohorts |
+|---|---|---|---|---|---|
+| persistently low | 22,573 | 2,436 | 205,677.0 | 11.8 | 6 |
+| remitted | 4,585 | 596 | 36,895.0 | 16.2 | 6 |
+| incident | 7,278 | 1,046 | 58,685.0 | 17.8 | 6 |
+| persistently affected | 21,424 | 4,144 | 166,367.0 | 24.9 | 6 |
+
+## 对撞结果
+
+- flow_baseline: got=103444.0000  ms=103444.0000  OK  (_flow vs baseline_resp)
+- flow_final: got=71867.0000  ms=71867.0000  OK  (_flow vs n_analytic)
+- grad1_hr: got=1.0495  ms=1.0500  OK  (_pool_2b vs grad1)
+- grad2_hr: got=1.3395  ms=1.3400  OK  (_pool_2b vs grad2)
+- grad3_hr: got=1.6446  ms=1.6400  OK  (_pool_2b vs grad3)
+- t3A_Depression_hr: got=1.4997  ms=1.5000  OK  (_pool_3a vs ms)
+- t3A_Disability_hr: got=1.4692  ms=1.4700  OK  (_pool_3a vs ms)
+- t3A_Multimorbidity_hr: got=1.1631  ms=1.1600  OK  (_pool_3a vs ms)
+- t3B_Depression_hr: got=1.4353  ms=1.4400  OK  (_pool_3b vs ms)
+- t3B_Disability_hr: got=1.3634  ms=1.3600  OK  (_pool_3b vs ms)
+- t3B_Multimorbidity_hr: got=1.0684  ms=1.0700  OK  (_pool_3b vs ms)
+- t3C_All_three_hr: got=1.6446  ms=1.6400  OK  (_pool_3c vs ms)
+- t3C_Depression_only_hr: got=1.1418  ms=1.1400  OK  (_pool_3c vs ms)
+- t3C_Disability_only_hr: got=1.2034  ms=1.2000  OK  (_pool_3c vs ms)
+- t3C_Disability+Depression_hr: got=1.4878  ms=1.4900  OK  (_pool_3c vs ms)
+- t3C_Disability+Multimorbidity_hr: got=1.1141  ms=1.1100  OK  (_pool_3c vs ms)
+- t3C_Multimorbidity_only_hr: got=0.8941  ms=0.8900  OK  (_pool_3c vs ms)
+- t3C_Multimorbidity+Depression_hr: got=1.2667  ms=1.2700  OK  (_pool_3c vs ms)
+- lvl_change_hr: got=1.0603  ms=1.0600  OK  (_level_pool vs ms)
+- lvl_base_hr: got=1.3011  ms=1.3000  OK  (_level_pool vs ms)
+- lvl_fu_hr: got=1.3301  ms=1.3300  OK  (_level_pool vs ms)
+- traj_dist 与 p13 输出逐行一致 (n=24)

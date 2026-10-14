@@ -1,0 +1,23 @@
+Table S4a 基线缺失率（%）:
+cohort     n  dai3  disab  multi  dep  age  male  edu  partnered  smoke3  drink_now   bmi  urban   grip    act
+CHARLS  9920   0.0    0.0    0.0  0.0  0.0   0.0 0.00       0.00    0.01       0.00 13.83   0.00  15.05  57.41
+  ELSA  8848   0.0    0.0    0.0  0.0  0.0   0.0 8.74       0.01    0.00       0.01 13.10 100.00 100.00   0.01
+   HRS 14667   0.0    0.0    0.0  0.0  0.0   0.0 0.00       0.00    0.74       0.01  1.36   0.22 100.00 100.00
+ KLoSA  6183   0.0    0.0    0.0  0.0  0.0   0.0 0.00       0.00    0.00       0.00  2.07   0.00   6.86   0.00
+  MHAS 11234   0.0    0.0    0.0  0.0  0.0   0.0 0.41       0.00    0.03       0.02 10.17   0.00  98.16   0.03
+ SHARE 21015   0.0    0.0    0.0  0.0  0.0   0.0 0.00       0.01    0.00       0.01  1.23   3.90   4.53   0.01
+
+Table S4b 缺失者 vs 完整者:
+cohort  n_missing  n_complete  age_missing  age_complete  disab_missing  disab_complete  ev_missing  ev_complete
+CHARLS       1373        8547        61.13         61.24           23.3            26.6        12.2         16.1
+  ELSA       1838        7010        66.06         63.40           32.0            23.4        18.5         18.2
+   HRS        307       14360        64.22         66.90           19.9            17.2        26.4         26.5
+ KLoSA        128        6055        72.66         64.35           10.2             8.9        30.5         12.3
+  MHAS       1191       10043        65.76         63.49           21.9            16.9        17.9          9.4
+ SHARE        265       20750        66.77         63.45           31.3            15.9        18.1         10.4
+
+合计（加权）:
+ n_missing  n_complete  age_missing  age_complete  disab_missing  disab_complete  ev_missing  ev_complete
+      5102       66765        64.75         63.99           26.0            17.9        17.4         15.4
+
+DONE

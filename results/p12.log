@@ -1,0 +1,25 @@
+Cohen κ（自制 dem_alg_edu vs 预置 dem_pub）:
+cohort      n    kappa    agree  prev_alg  prev_pub
+  ELSA  25107 0.533351 0.962122  4.986657  3.477118
+   HRS 194471 0.389546 0.930982  7.709119  4.252562
+ KLoSA  29176 0.612158 0.936832  7.533589 10.306416
+
+患病率对照（%）:
+cohort wave_agg  dem_alg_edu  dem_alg  dem_alg25  dem_pub
+CHARLS      all          5.9      6.2        7.4      NaN
+  ELSA      all          5.0      5.0       13.3      3.5
+   HRS      all          7.7      7.7       14.6      4.3
+ KLoSA      all          7.5      8.3       17.4     10.3
+  MHAS      all          8.4      9.0       20.1      NaN
+ SHARE      all          4.2      4.6       13.5      NaN
+不变量校验通过：dem_alg_edu 在 6 个队列上与主分析 M2 的 HR 与 n 完全一致
+替代结局 M2 合并:
+    outcome  k       hr       lo       hi        I2  events     n                          cohorts
+    dem_alg  6 1.264860 1.200686 1.332463 81.679719   10692 66765 CHARLS,ELSA,HRS,KLoSA,MHAS,SHARE
+  dem_alg25  6 1.192823 1.139920 1.248182 83.655866   18310 66765 CHARLS,ELSA,HRS,KLoSA,MHAS,SHARE
+dem_alg_edu  6 1.267014 1.206592 1.330462 76.825178   10297 66765 CHARLS,ELSA,HRS,KLoSA,MHAS,SHARE
+    dem_pub  3 1.337028 1.286495 1.389545  0.000000    3515 27425                   ELSA,HRS,KLoSA
+
+④ 保守截尾（末次认知评估，不向死亡年延伸）M2 合并: k=6 HR=1.276 (1.210-1.346) I2=80.5%
+
+DONE

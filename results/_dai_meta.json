@@ -1,0 +1,26 @@
+{
+ "CHARLS": {
+  "n_base": 17708,
+  "dai_complete": 15785
+ },
+ "ELSA": {
+  "n_base": 12099,
+  "dai_complete": 11717
+ },
+ "HRS": {
+  "n_base": 19578,
+  "dai_complete": 17493
+ },
+ "KLoSA": {
+  "n_base": 7920,
+  "dai_complete": 7868
+ },
+ "MHAS": {
+  "n_base": 15723,
+  "dai_complete": 14422
+ },
+ "SHARE": {
+  "n_base": 30416,
+  "dai_complete": 30229
+ }
+}

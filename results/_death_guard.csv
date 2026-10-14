@@ -1,0 +1,49 @@
+﻿cohort,cat,kept,raw
+CHARLS,Continuous DAI,True,
+CHARLS,Depression only,True,0.9315343585083347
+CHARLS,Multimorbidity only,True,1.4033925671985625
+CHARLS,Multimorbidity+depression,True,1.5136276917775378
+CHARLS,Disability only,True,1.2264107011113525
+CHARLS,Disability+multimorbidity,True,0.31697940125072166
+CHARLS,Disability+depression,True,2.112246716602061
+CHARLS,All three,True,1.8943060161212042
+ELSA,Continuous DAI,True,
+ELSA,Depression only,True,0.9536339135589974
+ELSA,Multimorbidity only,True,1.7325477051851075
+ELSA,Multimorbidity+depression,True,2.2744169395516605
+ELSA,Disability only,True,1.8586930894683227
+ELSA,Disability+multimorbidity,True,1.0813790742913318
+ELSA,Disability+depression,True,1.9898724967713222
+ELSA,All three,True,2.477503911544831
+HRS,Continuous DAI,True,
+HRS,Depression only,True,1.1925332248032157
+HRS,Multimorbidity only,True,1.5548274745757384
+HRS,Multimorbidity+depression,True,1.8627966213120364
+HRS,Disability only,True,1.2097982240926597
+HRS,Disability+multimorbidity,True,1.307312383842507
+HRS,Disability+depression,True,2.1452126070528017
+HRS,All three,True,2.6213317086907484
+KLoSA,Continuous DAI,True,
+KLoSA,Depression only,True,1.2806085752590635
+KLoSA,Multimorbidity only,True,1.498307384733116
+KLoSA,Multimorbidity+depression,True,1.6043147526202615
+KLoSA,Disability only,True,1.3369531522141547
+KLoSA,Disability+multimorbidity,True,2.7295798515078276
+KLoSA,Disability+depression,True,1.430018983484973
+KLoSA,All three,True,2.411289368808778
+MHAS,Continuous DAI,True,
+MHAS,Depression only,True,1.0245080509005131
+MHAS,Multimorbidity only,True,1.4067086591406046
+MHAS,Multimorbidity+depression,True,1.5794757124640721
+MHAS,Disability only,True,1.4649908459038357
+MHAS,Disability+multimorbidity,False,94.07733282929114
+MHAS,Disability+depression,False,9.296069198313101e-68
+MHAS,All three,True,2.9882191663334035
+SHARE,Continuous DAI,True,
+SHARE,Depression only,True,1.0003359829065486
+SHARE,Multimorbidity only,True,1.446069584407306
+SHARE,Multimorbidity+depression,True,1.5868016180388527
+SHARE,Disability only,True,1.3695234706345576
+SHARE,Disability+multimorbidity,True,1.58251288842293
+SHARE,Disability+depression,True,1.8291020379014011
+SHARE,All three,True,1.888914845257228

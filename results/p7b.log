@@ -1,0 +1,60 @@
+======================================================================
+# CHARLS
+  (1) one-wave lag  : prop=0.227 n=7318
+  (2) two-wave      : prop=0.169 n=6481
+  (3) incident dep  : prop=0.105 n=4679
+  (4) interaction   : prop=0.802 n=8547
+  (5) multi only    : prop=-0.410 n=8547
+  (6) 4-way: TE=0.0128 CDE=0.0072 INTref=0.0005 INTmed=0.0005 PIE=0.0047  PIE/NIE=0.91
+======================================================================
+# ELSA
+  (1) one-wave lag  : prop=0.197 n=6039
+  (2) two-wave      : prop=0.235 n=5322
+  (3) incident dep  : prop=0.120 n=5191
+  (4) interaction   : prop=0.067 n=7010
+  (5) multi only    : prop=0.268 n=7010
+  (6) 4-way: TE=0.0153 CDE=0.0117 INTref=0.0005 INTmed=0.0006 PIE=0.0025  PIE/NIE=0.80
+======================================================================
+# HRS
+  (1) one-wave lag  : prop=0.090 n=13335
+  (2) two-wave      : prop=0.078 n=12409
+  (3) incident dep  : prop=0.036 n=11475
+  (4) interaction   : prop=0.212 n=14360
+  (5) multi only    : prop=0.085 n=14360
+  (6) 4-way: TE=0.0103 CDE=0.0086 INTref=0.0003 INTmed=0.0003 PIE=0.0011  PIE/NIE=0.79
+======================================================================
+# KLoSA
+  (1) one-wave lag  : prop=0.437 n=5578
+  (2) two-wave      : prop=0.508 n=5406
+  (3) incident dep  : prop=0.537 n=4049
+  (4) interaction   : prop=0.225 n=6055
+  (5) multi only    : prop=0.176 n=6055
+  (6) 4-way: TE=0.0076 CDE=0.0047 INTref=0.0011 INTmed=0.0003 PIE=0.0015  PIE/NIE=0.84
+======================================================================
+# MHAS
+  (1) one-wave lag  : prop=0.105 n=7934
+  (3) incident dep  : prop=0.118 n=5556
+  (4) interaction   : prop=0.346 n=10043
+  (5) multi only    : prop=0.196 n=10043
+  (6) 4-way: TE=0.0142 CDE=0.0112 INTref=0.0006 INTmed=0.0005 PIE=0.0019  PIE/NIE=0.78
+======================================================================
+# SHARE
+  (1) one-wave lag  : prop=0.227 n=15182
+  (2) two-wave      : prop=0.201 n=13057
+  (3) incident dep  : prop=0.153 n=11615
+  (4) interaction   : prop=0.157 n=20750
+  (5) multi only    : prop=0.207 n=20750
+  (6) 4-way: TE=0.0051 CDE=0.0039 INTref=0.0002 INTmed=0.0002 PIE=0.0008  PIE/NIE=0.76
+
+======================================================================
+# 敏感性设定合并（原始尺度 DL）
+  incident depression    k=6 8.6% (2.2-14.9) I2=35.0%
+  multimorbidity only    k=6 9.5% (5.4-13.5) I2=0.0%
+  one-wave lag           k=6 17.3% (7.8-26.8) I2=58.2%
+  two-wave washout       k=5 14.3% (5.0-23.6) I2=51.0%
+  with interaction       k=6 19.4% (11.7-27.1) I2=0.0%
+
+# 四向分解合并（逐队列均值）
+  k=6 TE=0.0109 CDE=0.0079 INTref=0.0005 INTmed=0.0004 PIE=0.0021  纯间接占比=0.83
+
+DONE

@@ -16,11 +16,33 @@ OUT = L.OUT
 # 2026-10-14：输出目录与 DPI 可由环境变量覆盖（投稿用 600 dpi 单图，不影响 docx 内嵌 400 dpi 图）
 FIG = os.environ.get('DEM_FIGDIR', os.path.join(OUT, 'fig'))
 DPI = int(os.environ.get('DEM_FIGDPI', '400'))
+# 输出文件名前缀：正文内嵌链用 Fig（p21_replace_figs 依赖 FigN.png），
+# 投稿包槽位要求 FigureN.png。2026-10-14 因二者不一致，投稿包 Figures/ 长期停留在旧图。
+FIGPRE = os.environ.get('DEM_FIGPREFIX', 'Fig')
 MS = pd.read_csv(os.path.join(OUT, '_ms_numbers.csv'))
 MS['key'] = MS['key'].astype(str).str.replace('^\ufeff', '', regex=True)
 MS['value'] = pd.to_numeric(MS['value'], errors='coerce')
 V = dict(zip(MS['key'], MS['value']))
 os.makedirs(FIG, exist_ok=True)
+
+# ================================================================ 图内字号整体放大
+# 2026-10-14（由 PDF 渲染发现的缺陷）：图在 docx 中按 15.88 cm 放置，而画布宽 11.0–11.5 英寸，
+# 缩放比约 0.55–0.65 → 7.2 pt 的标注在最终尺寸下只剩约 4.3 pt，印出来不可读。
+# 解决：生成后统一把所有 Text 对象的字号 ×FONT_SCALE（只放大字号，不动几何与线宽），
+# 使最终有效字号达到约 7 pt。几何不变，故不会改变面板布局，但需目视确认无重叠。
+FONT_SCALE = 1.35
+
+
+def scale_fonts(fig, k=FONT_SCALE):
+    n = 0
+    for o in fig.findobj(match=lambda x: hasattr(x, 'get_fontsize') and hasattr(x, 'set_fontsize')):
+        try:
+            o.set_fontsize(float(o.get_fontsize()) * k)
+            n += 1
+        except Exception:
+            pass
+    print('      [font] 已放大 %d 个文本对象的字号 ×%.2f' % (n, k))
+    return n
 
 plt.rcParams.update({
     'font.family': 'Arial', 'font.size': 9, 'axes.linewidth': 0.8,
@@ -121,6 +143,30 @@ class FP(object):
         return y
 
 
+def assert_inside_boxes(fig, pairs, tag):
+    """布局断言：每个文字对象的包围盒必须落在其所属盒子内（含 0.5 px 容差）。
+
+    pairs: [(FancyBboxPatch, [Text, ...]), ...]
+    2026-10-14 新增：此前 Figure 1 面板 A 的文字多次越框（标签被放大后装不下、
+    注释被画到框外），肉眼看一次只能抓一次，故改为脚本断言，改图时立即报错。
+    """
+    fig.canvas.draw()
+    r = fig.canvas.get_renderer()
+    bad = []
+    for pat, texts in pairs:
+        pb = pat.get_window_extent(r)
+        for t in texts:
+            tb = t.get_window_extent(r)
+            if (tb.x0 < pb.x0 - 0.5 or tb.x1 > pb.x1 + 0.5
+                    or tb.y0 < pb.y0 - 0.5 or tb.y1 > pb.y1 + 0.5):
+                bad.append('%r 文字(%.1f,%.1f)-(%.1f,%.1f) 越出盒子(%.1f,%.1f)-(%.1f,%.1f)'
+                           % (t.get_text()[:28], tb.x0, tb.y0, tb.x1, tb.y1,
+                              pb.x0, pb.y0, pb.x1, pb.y1))
+    if bad:
+        raise AssertionError('[%s] 共 %d 处文字越框：\n  - %s' % (tag, len(bad), '\n  - '.join(bad)))
+    print('      [layout] %s：%d 个文字对象全部在框内 ✓' % (tag, sum(len(v) for _, v in pairs)))
+
+
 def annot(ax, x, y, txt, color='#111111', size=7.6, ha='left', va='center'):
     ax.annotate(txt, (x, y), fontsize=size, color=color, ha=ha, va=va,
                 xycoords=('axes fraction', 'data'), annotation_clip=False)
@@ -130,39 +176,43 @@ def annot(ax, x, y, txt, color='#111111', size=7.6, ha='left', va='center'):
 FL = pd.read_csv(os.path.join(OUT, '_flow.csv'))
 T1 = pd.read_csv(os.path.join(OUT, 'Table1.csv'))
 
-fig = plt.figure(figsize=(11.5, 8.2))
+fig = plt.figure(figsize=(11.5, 11.1))
 gs = fig.add_gridspec(1, 2, width_ratios=[1.0, 1.35], wspace=0.16)
 axA = fig.add_subplot(gs[0, 0])
 axA.set_xlim(0, 1); axA.set_ylim(0, 1); axA.axis('off')
 
 STEP_COL = [BLUE, BLUE, BLUE, BLUE, BLUE, RED]
-ys = np.linspace(0.905, 0.075, 6)
-h = 0.088
+_flow_pairs = []
+ys = np.linspace(0.930, 0.160, 6)   # 底部留出 0–0.11 的空白带放注释
+h = 0.098
 for i, r in FL.iterrows():
     y0 = ys[i] - h / 2
     face = '#eaf1fa' if i < 5 else '#fdecea'
     edge = '#2c6fbb' if i < 5 else '#c0392b'
-    box = FancyBboxPatch((0.01, y0), 0.545, h, boxstyle='round,pad=0.005,rounding_size=0.010',
+    box = FancyBboxPatch((0.01, y0), 0.70, h, boxstyle='round,pad=0.005,rounding_size=0.010',
                          linewidth=1.0, edgecolor=edge, facecolor=face, zorder=3)
     axA.add_patch(box)
-    lab = r['label'].replace('Survived to and assessed during follow-up',
-                             'Survived and assessed during follow-up')
-    axA.text(0.022, y0 + h * 0.70, lab, fontsize=7.5, va='center', color='#111111')
-    axA.text(0.022, y0 + h * 0.27, 'N = %s' % format(int(r['n']), ','), fontsize=10.0,
-             va='center', color=edge, fontweight='bold')
+    lab = (r['label'].replace('Survived to and assessed during follow-up',
+                             'Survived and assessed at follow-up')
+           .replace('Baseline cognitive assessment available',
+                    'Cognitive assessment available'))
+    _t_lab = axA.text(0.022, y0 + h * 0.70, lab, fontsize=6.2, va='center', color='#111111')
+    _t_n = axA.text(0.022, y0 + h * 0.27, 'N = %s' % format(int(r['n']), ','), fontsize=8.8,
+                    va='center', color=edge, fontweight='bold')
+    _flow_pairs.append((box, [_t_lab, _t_n]))
     if i:
-        axA.annotate('', xy=(0.28, y0 + h + 0.010), xytext=(0.28, ys[i - 1] - h - 0.010),
+        axA.annotate('', xy=(0.36, y0 + h + 0.010), xytext=(0.36, ys[i - 1] - h - 0.010),
                      arrowprops=dict(arrowstyle='-|>', color='#666666', lw=1.0,
                                      shrinkA=0, shrinkB=0), zorder=2)
-        axA.text(0.575, (ys[i - 1] - h + y0) / 2, '− %s' % format(int(r['excluded']), ','),
-                 fontsize=8.2, va='center', ha='left', color=RED, fontweight='bold')
+        axA.text(0.745, (ys[i - 1] - h + y0) / 2, '− %s' % format(int(r['excluded']), ','),
+                 fontsize=7.4, va='center', ha='left', color=RED, fontweight='bold')
 axA.text(0.5, 1.035, 'A  Participant flow and sample selection', fontsize=10.5,
          fontweight='bold', ha='center', va='top')
 tot = int(T1.groupby('cohort')['events'].sum().sum())
 py = T1.groupby('cohort')['py'].sum().sum()
-axA.text(0.01, 0.012, '%s incident dementia cases · %s person-years · median follow-up 9 years'
-         % (format(tot, ','), format(int(round(py)), ',')), fontsize=7.4,
-         color='#333333', va='bottom')
+axA.text(0.022, 0.100, '%s cases · %s person-years\nmedian follow-up 9 years'
+         % (format(tot, ','), format(int(round(py)), ',')), fontsize=6.6,
+         color='#333333', va='top')
 
 axB = fig.add_subplot(gs[0, 1])
 order = ['CHARLS', 'ELSA', 'HRS', 'KLoSA', 'MHAS', 'SHARE']
@@ -195,7 +245,9 @@ axB.legend(handles, ['DAI = 0', 'DAI = 1', 'DAI = 2', 'DAI = 3'], ncol=4, fontsi
            frameon=False, loc='upper center', bbox_to_anchor=(0.5, -0.085))
 for s in ('top', 'right', 'left'):
     axB.spines[s].set_visible(False)
-fig.savefig(os.path.join(FIG, 'Fig1.png'))
+scale_fonts(fig)
+assert_inside_boxes(fig, _flow_pairs, 'Fig1 面板A 流程盒')
+fig.savefig(os.path.join(FIG, FIGPRE + '1.png'))
 plt.close(fig)
 
 # =============================================================== Fig 2
@@ -208,8 +260,8 @@ P3C = pd.read_csv(os.path.join(OUT, '_pool_3c.csv'))
 MP = pd.read_csv(os.path.join(OUT, '_med_pool.csv'))
 MS_ = pd.read_csv(os.path.join(OUT, '_med_sens_pool.csv'))
 
-fig = plt.figure(figsize=(11.5, 9.0))
-gs = fig.add_gridspec(2, 2, hspace=0.42, wspace=0.30)
+fig = plt.figure(figsize=(11.5, 12.2))
+gs = fig.add_gridspec(2, 2, hspace=0.62, wspace=0.46)
 
 # ---- A: per-cohort M2 + pooled M1-M4
 axA = fig.add_subplot(gs[0, 0])
@@ -248,7 +300,7 @@ for lv in ['1 vs 0', '2 vs 0', '3 vs 0']:
 f.drop_blank()
 f.dump('Fig2B')
 y = f.draw(axB, 'Hazard ratio (95 % CI, log scale)', (0.8, 3.2),
-           title='B  Categorical gradient: dose–response and cohort consistency')
+           title='B  Categorical gradient by number of syndromes')
 for i, r in enumerate(f.rows):
     if r.startswith('Pooled'):
         lv = '3 vs 0' if '3 syndrome' in r else ('2 vs 0' if '2 syndrome' in r else '1 vs 0')
@@ -275,7 +327,7 @@ f.add('None of the three (reference)', 1.0, 1.0, 1.0, '#444444')
 f.drop_blank()
 y = f.dump('Fig2C')
 f.draw(axC, 'Hazard ratio (95 % CI, log scale)', (0.6, 2.2),
-           title='C  Joint distribution of the three syndromes (7 contrasts vs none)')
+           title='C  Joint distribution of the three syndromes')
 axC.text(0.0, -0.130, 'Pooled cohort-specific estimates, random effects. I² is reported in Table 3C.',
          transform=axC.transAxes, fontsize=7.2, color='#555555', va='top')
 
@@ -300,7 +352,7 @@ for key, lab in SPECS:
 f.drop_blank()
 f.dump('Fig2D')
 y = f.draw(axD, 'Proportion mediated by depression (%)', (0, 45), ref=None, marker=None,
-           title='D  Proportion mediated by depression: three frameworks')
+           title='D  Proportion mediated by depression')
 for i, mk in enumerate(f.mk):
     axD.plot([f.hrs[i]], [y[i]], marker=mk, ms=6.0 if mk == 'D' else 5.2, color=f.cols[i],
              zorder=4, markeredgecolor='white', markeredgewidth=0.4)
@@ -314,7 +366,8 @@ axD.text(0.0, -0.135, 'Diamonds: pooled cohort-specific proportions under three 
                       'Circles: four further specifications. I² = %s %% for the temporally ordered framework.'
                       % ('%.1f' % float(V['med_tp_pct_I2'])),
          transform=axD.transAxes, fontsize=7.2, color='#555555', va='top')
-fig.savefig(os.path.join(FIG, 'Fig2.png'))
+scale_fonts(fig)
+fig.savefig(os.path.join(FIG, FIGPRE + '2.png'))
 plt.close(fig)
 
 # =============================================================== Fig 3
@@ -325,7 +378,7 @@ TP = pd.read_csv(os.path.join(OUT, '_traj_pool.csv'))
 TR = pd.read_csv(os.path.join(OUT, '_traj.csv'))
 LP = pd.read_csv(os.path.join(OUT, '_level_pool.csv'))
 
-fig = plt.figure(figsize=(11.5, 10.6))
+fig = plt.figure(figsize=(11.5, 14.3))
 gs = fig.add_gridspec(2, 2, hspace=0.36, wspace=0.30)
 
 # ---- A: time-varying
@@ -347,7 +400,7 @@ for v in ['time-varying (1 wave)', 'lagged (2 waves)', 'cumulative mean']:
 f.drop_blank()
 f.dump('Fig3A')
 f.draw(axA, 'Hazard ratio per additional syndrome', (0.9, 2.2),
-       title='A  Time-varying exposure: widening the exposure–outcome gap')
+       title='A  Time-varying exposure and the exposure–outcome gap')
 
 # ---- B: pooled density by trajectory
 axB = fig.add_subplot(gs[0, 1])
@@ -364,8 +417,9 @@ print('      [Fig3B] ' + '; '.join('%s 密度=%.1f (n=%d, 事件=%d)' % (t, d, n
 bars = axB.bar(np.arange(4), dens, color=TCOL, width=0.62, edgecolor='white', linewidth=0.8)
 for i, (d, n, e) in enumerate(zip(dens, ns, evs)):
     axB.text(i, d + 0.5, '%.1f' % d, ha='center', fontsize=8.6, fontweight='bold')
-    axB.text(i, 0.035 * max(dens), 'n = %s\n%s events' % (format(n, ','), format(e, ',')),
-             ha='center', fontsize=7.2, color='white', va='bottom')
+    # 字号放大后横排会溢出窄柱体，改为竖排（rotation=90）彻底消除横向溢出
+    axB.text(i, 0.030 * max(dens), 'n = %s\n%s events' % (format(n, ','), format(e, ',')),
+             ha='center', fontsize=6.6, color='white', va='bottom', rotation=90)
 axB.set_xticks(np.arange(4)); axB.set_xticklabels(TLAB, fontsize=7.8)
 axB.set_ylabel('Dementia incidence density (per 1,000 person-years)', fontsize=8.4)
 axB.set_ylim(0, max(dens) * 1.18)
@@ -397,7 +451,7 @@ f.add('Persistently low 0→0 (reference)', 1.0, 1.0, 1.0, '#444444')
 f.drop_blank()
 f.dump('Fig3C')
 f.draw(axC, 'Hazard ratio relative to persistently low', (0.9, 3.0),
-       title='C  Trajectory classes (grey = cohorts, red diamond = pooled)')
+       title='C  Trajectory classes (red diamond = pooled)')
 axC.text(0.0, -0.115, 'Upper block: cohort-specific estimates; lower block: pooled estimates.',
          transform=axC.transAxes, fontsize=7.2, color='#555555', va='top')
 
@@ -415,13 +469,14 @@ for mod, term, lab, c in ORD:
 f.drop_blank()
 f.dump('Fig3D')
 y = f.draw(axD, 'Hazard ratio per additional syndrome', (0.9, 1.7),
-           title='D  Risk tracks the current level, not the rate of change')
+           title='D  Risk tracks current level, not rate of change')
 for i, (mod, term, lab, c) in enumerate(ORD):
     r = LP[(LP['model'] == mod) & (LP['term'] == term)].iloc[0]
     axD.text(1.72, y[i], 'I² = %.0f %%' % r['I2'], fontsize=7.4, va='center', color='#555555')
 axD.text(0.0, -0.135, 'Δ cannot be entered jointly with the follow-up level, with which it is collinear.',
          transform=axD.transAxes, fontsize=7.2, color='#555555', va='top')
-fig.savefig(os.path.join(FIG, 'Fig3.png'))
+scale_fonts(fig)
+fig.savefig(os.path.join(FIG, FIGPRE + '3.png'))
 plt.close(fig)
 
 # =============================================================== Fig 4
@@ -433,7 +488,7 @@ MODS = [('Age group', ['<65', '65-74', '>=75'], ['< 65', '65–74', '≥ 75']),
         ('Baseline cognition', ['low', 'high'], ['Below median', 'Above median']),
         ('Marital status', ['0.0', '1.0'], ['Not partnered', 'Partnered']),
         ('BMI', ['<25', '25-29.9', '>=30'], ['< 25', '25–29.9', '≥ 30'])]
-fig, axes = plt.subplots(2, 3, figsize=(11.0, 8.4))
+fig, axes = plt.subplots(2, 3, figsize=(11.0, 11.3))
 fig.subplots_adjust(hspace=0.42, wspace=0.58, left=0.06, right=0.985, top=0.92, bottom=0.07)
 for ax, (mod, keys, labs) in zip(axes.ravel(), MODS):
     iv = INT[INT['modifier'] == mod].iloc[0]
@@ -460,7 +515,8 @@ fig.suptitle('Subgroup and interaction analyses', fontsize=11, fontweight='bold'
 fig.text(0.02, 0.012, 'Pooled HR within each stratum by random effects; the covariate set of the stratifying '
                       'variable itself was removed from that stratum. Dashed line: HR = 1.',
          fontsize=7.4, color='#555555')
-fig.savefig(os.path.join(FIG, 'Fig4.png'))
+scale_fonts(fig)
+fig.savefig(os.path.join(FIG, FIGPRE + '4.png'))
 plt.close(fig)
 
 for f in sorted(os.listdir(FIG)):

@@ -17,7 +17,7 @@ import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, 'out')
-MS = r'D:/桌面/AIzuopin/痴呆/修订版正文_纯文本_20261012.txt'
+MS = os.environ.get('DEM_DOCX', r'D:/桌面/AIzuopin/痴呆/修订版正文_纯文本_20261012.txt')
 EPMC = 'https://www.ebi.ac.uk/europepmc/webservices/rest/search'
 CR = 'https://api.crossref.org/works'
 UA = 'WorkBuddy-litcheck/1.0 (mailto:15511075821@163.com)'
@@ -90,8 +90,19 @@ def cr_query(q, rows=5):
 
 
 # ---------------------------------------------------------------- 解析参考文献
-txt = open(MS, encoding='utf8').read()
-seg = txt[txt.find('\nReferences'):txt.find('Figure legends')]
+if MS.lower().endswith('.docx'):
+    import html as _h
+    import zipfile as _z
+    _x = _z.ZipFile(MS).read('word/document.xml').decode('utf8')
+    _b = _x.split('<w:body>')[1].split('</w:body>')[0]
+    _blk = re.compile(r'<w:tbl>.*?</w:tbl>|<w:p\b.*?</w:p>|<w:p\b[^>]*/>', re.S)
+    txt = '\n'.join(_h.unescape(''.join(re.findall(r'<w:t[^>]*>([^<]*)</w:t>', m.group(0))))
+                    for m in _blk.finditer(_b))
+else:
+    txt = open(MS, encoding='utf8').read()
+_i0 = txt.find('\nReferences')
+_i1 = txt.find('Figure legends')
+seg = txt[_i0:_i1] if (_i0 >= 0 and _i1 > _i0) else txt[_i0:]
 refs = [l.strip() for l in seg.split('\n') if l.strip()][1:]
 
 REF = []

@@ -1,6 +1,6 @@
 每个额外综合征风险高 27 %                        | round(100*(pool_M2_hr-1)) = 27                 | 27 % higher risk of dementia                   | HIT
 三综合征组风险高 64 %                          | round(100*(grad3_hr-1)) = 64                   | at 64 % higher risk                            | HIT
-分类梯度 1/2/3 vs 0 的点估计与上界                | grad1_hr, grad2_hr, grad3_hr, grad3_hi         | 1 syndrome 1.05; 2 syndromes 1.34; 3 syndromes 1.64, 1.43–1.89) | HIT
+分类梯度 1/2/3 vs 0 的点估计与上界                | grad1_hr, grad2_hr, grad3_hr, grad3_hi         | 1.05 (0.97–1.14) for one syndrome, 1.34 (1.26–1.43) for two and 1.64 (1.43–1.89) for all three | HIT
 抑郁 vs 非抑郁负担绝对风险差为 1.8 倍                | cf_dep_delta / cf_burden_delta = 1.8101        | a 1.8-fold difference                          | HIT
 4 组 5 年风险 3.58 / 4.37 / 5.01 / 6.10 %  | cf_risk_none / cf_risk_burden / cf_risk_dep / cf_risk_both | 3.58 % in participants with neither            | HIT
 抑郁 +1.43 百分点 / 负担 +0.79 百分点            | cf_dep_delta, cf_burden_delta                  | accounted for +1.43 percentage points and non-depressive burden for +0.79 | HIT

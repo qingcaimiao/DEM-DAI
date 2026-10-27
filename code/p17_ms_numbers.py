@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """p17_ms_numbers.py —— 生成「修订版稿件」要用的全部数字（唯一权威来源）
 
-从 out/ 的中间产物（全部由 p2–p16 从 D:\shujuku 计算落盘）重新汇总，
+从 out/ 的中间产物（全部由 p2–p16 从 D:/shujuku 计算落盘）重新汇总，
 并对少数尚未算过的量（ADL/IADL 单独入模、DAI 层间 SMD、区域差异检验、
 轨迹合并密度、加权年龄/随访）就地补算。
 
@@ -381,6 +381,9 @@ for _, r in AL.iterrows():
     put('alt_%s_lo' % k, round(r['lo'], 6), '_alt_pool')
     put('alt_%s_hi' % k, round(r['hi'], 6), '_alt_pool')
     put('alt_%s_k' % k, int(r['k']), '_alt_pool')
+    # 2026-10-14：Table 4D 表注要引用 dem_pub 行的 n（27,425），必须落键，否则正文数字无法溯源
+    put('alt_%s_n' % k, int(r['n']), '_alt_pool')
+    put('alt_%s_ev' % k, int(r['events']), '_alt_pool')
 put('alt_min', round(float(AL['hr'].min()), 2), '_alt_pool')
 put('alt_max', round(float(AL['hr'].max()), 2), '_alt_pool')
 TS = pd.read_csv(os.path.join(OUT, '_tsens_pool.csv')).iloc[0]

@@ -17,7 +17,7 @@ import numpy as np
 import pandas as pd
 
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'out')
-DOCX = r'D:/桌面/AIzuopin/痴呆/稿件正文_修订稿_v3_20261013.docx'
+DOCX = os.environ.get('DEM_DOCX', r'D:/桌面/AIzuopin/痴呆/稿件正文_修订稿_v4_20261013.docx')
 
 z = zipfile.ZipFile(DOCX)
 xml = z.read('word/document.xml').decode('utf8')
@@ -52,9 +52,10 @@ S.append(chk('三综合征组风险高 64 %', 'round(100*(grad3_hr-1)) = 64',
              'at %d %% higher risk' % round(100 * (n('grad3_hr') - 1))))
 S.append(chk('分类梯度 1/2/3 vs 0 的点估计与上界',
              'grad1_hr, grad2_hr, grad3_hr, grad3_hi',
-             '1 syndrome %s; 2 syndromes %s; 3 syndromes %s, %s\u2013%s)'
-             % ('%.2f' % n('grad1_hr'), '%.2f' % n('grad2_hr'), '%.2f' % n('grad3_hr'),
-                '%.2f' % n('grad3_lo'), '%.2f' % n('grad3_hi'))))
+             '%s (%s\u2013%s) for one syndrome, %s (%s\u2013%s) for two and %s (%s\u2013%s) for all three'
+             % ('%.2f' % n('grad1_hr'), '%.2f' % n('grad1_lo'), '%.2f' % n('grad1_hi'),
+                '%.2f' % n('grad2_hr'), '%.2f' % n('grad2_lo'), '%.2f' % n('grad2_hi'),
+                '%.2f' % n('grad3_hr'), '%.2f' % n('grad3_lo'), '%.2f' % n('grad3_hi'))))
 # ---------------- 绝对风险与倍数
 ratio = n('cf_dep_delta') / n('cf_burden_delta')
 S.append(chk('抑郁 vs 非抑郁负担绝对风险差为 1.8 倍',

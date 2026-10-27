@@ -26,8 +26,9 @@ BODY = [
     ('p', 'We submit for your consideration a multicohort study of 71,867 older adults in which the '
           'cumulative burden of three named geriatric syndromes \u2014 disability, multimorbidity and '
           'depression \u2014 counted as a single unweighted index (0\u20133) predicted incident dementia '
-          'across six harmonized population-based cohorts on three continents (CHARLS, ELSA, HRS, '
-          'KLoSA, MHAS and SHARE; 11,185 incident cases over 694,305 person-years).'),
+          '(pooled HR 1.27, 95 % CI 1.21\u20131.33 per additional syndrome; I\u00b2 = 76.8 %) across six '
+          'harmonized population-based cohorts on three continents (CHARLS, ELSA, HRS, KLoSA, MHAS and '
+          'SHARE; 11,185 incident cases over 694,305 person-years).'),
 
     ('h', 'What the study adds'),
     ('p', 'The three syndromes are individually established risk factors, and joint '
@@ -76,15 +77,17 @@ BODY = [
           'to its content. The authors declare no conflicts of interest. The study used de-identified '
           'public-use data from established cohort studies that obtained their own ethical approval and '
           'participant consent; no additional ethical approval was required. Consistent with the '
-          'disclosure in the manuscript, AI-assisted tools were used for code generation, statistical '
-          'analysis support and language editing; all analyses were designed, verified and interpreted '
-          'by the authors, and the authors take full responsibility for the content.'),
+          'disclosure in the manuscript, the generative AI tool WorkBuddy (an AI coding and writing '
+          'assistant powered by the DeepSeek-V4.1-Flash large language model) was used for code '
+          'generation, statistical analysis support and language editing; all analyses were designed, '
+          'verified and interpreted by the authors, and the authors take full responsibility for the '
+          'content.'),
 
     ('h', 'Data and code availability'),
     ('p', 'The harmonized data are available to registered researchers from the Gateway to Global Aging '
           'Data and from each cohort\u2019s own repository. The analysis code that reproduces every '
-          'number, table and figure is available from the corresponding author and will be deposited in '
-          'a public repository with a DOI.'),
+          'number, table and figure is openly available at https://github.com/qingcaimiao/DEM-DAI and '
+          'archived on Zenodo at https://doi.org/10.5281/zenodo.23356045.'),
 
     ('p', 'Suggested reviewers, if you wish to use them, are listed in the submission form. We confirm '
           'that none is affiliated with Handan First Hospital or Hebei North University and that none '
@@ -94,8 +97,8 @@ BODY = [
 
     ('p', 'Yours sincerely,'),
     ('p', 'Renjie Zhang, MD'),
-    ('p', 'Department of Cardiology, Handan First Hospital, No. 25 Congtai Road, Handan 056002, '
-          'Hebei, China'),
+    ('p', 'Department of Cardiology (Cardiology Unit I), Handan First Hospital, No. 25 Congtai '
+          'Road, Handan 056000, Hebei, China'),
     ('p', 'E-mail: zhangrenjie725@sina.com | ORCID: 0009-0009-4026-2068'),
     ('p', 'on behalf of all authors'),
 ]
@@ -114,7 +117,7 @@ for k, v in BODY:
     else:
         md.append('**%s:** %s' % (k, v))
         md.append('')
-md_path = os.path.join(PKG, 'Cover_Letter_JCM.md')
+md_path = os.path.join(PKG, '_核对报告', 'Cover_Letter_JCM.md')   # 与审计脚本读取路径一致
 open(md_path, 'w', encoding='utf-8').write('\n'.join(md))
 print('写出', md_path)
 

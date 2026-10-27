@@ -11,8 +11,10 @@ import shutil
 import struct
 import zipfile
 
-DOCX = r'D:/桌面/AIzuopin/痴呆/稿件正文_修订稿_v4_20261013.docx'
-FIG = r'D:/workbuddygongzuokongjian/2026-10-12-21-32-15/dem_pipeline/out/fig'
+# Paths are parameterised: override with environment variables if needed.
+_BASE = os.path.dirname(os.path.abspath(__file__))
+DOCX = os.environ.get('DEM_DST_DOCX', os.path.join(_BASE, 'manuscript_v4.docx'))
+FIG = os.environ.get('DEM_FIGDIR', os.path.join(_BASE, 'out', 'fig'))
 SRC = [os.path.join(FIG, 'Fig%d.png' % i) for i in (1, 2, 3, 4)]
 
 

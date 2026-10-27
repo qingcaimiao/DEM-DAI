@@ -1,4 +1,4 @@
-外部意见回源核实 —— 稿件正文_修订稿_v4_20261013.docx
+外部意见回源核实 —— Manuscript_JCM_20261014.docx
 ==============================================================================
   连续单字符数字串 4+（"1 1 1 1" 乱码）                      : 0
   公式/对象/文本框/域（PDF 乱码来源）                          : 0
@@ -16,19 +16,19 @@
   j.jnh.2026（缺 a）                                : 0
   "Every row is estimated on the same"           : 0
   "No adjustment for multiple testing"           : 0
-  age²（上标）                                       : 4
-  multicohort                                    : 4
-  time-varying                                   : 13
-  fcaf222（Brain Commun 正确文章号）                    : 1
+  age²（上标）                                       : 3
+  multicohort                                    : 5
+  time-varying                                   : 11
+  fcaf222（Brain Commun 正确文章号）                    : 2
   j.jnha.2026                                    : 1
   M1 unadjusted                                  : 1
-  Benjamini–Hochberg procedure                   : 2
+  Benjamini–Hochberg procedure                   : 3
   "1.05 (0.97"（分类梯度起点）                           : 2
-  "Qingcai Miao¹²"（作者上标）                         : 1
+  "Qingcai Miao¹²"（作者上标）                         : 0
   "factors — in particular"（破折号）                 : 1
-  Table 2B Categorical gradient（应=1）             : 1
+  Table 2B Categorical gradient（应=1）             : 0
 
-  tbl=10  blip=4  反斜杠=0  段落=811
+  tbl=10  blip=4  反斜杠=0  段落=778
 
   image1 == 重绘图 OK
   image2 == 重绘图 OK

@@ -1,6 +1,10 @@
 # participant-level derived data (not redistributable)
 *.parquet
+# manuscript files (not distributed)
+*.docx
+manuscript*.docx
 # local outputs / OS
+out/
 __pycache__/
 *.pyc
 .ipynb_checkpoints/

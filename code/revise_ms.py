@@ -19,9 +19,9 @@ from decimal import Decimal, ROUND_HALF_UP
 import numpy as np
 
 BASE = os.path.dirname(os.path.abspath(__file__))
-OUT = os.path.join(BASE, 'dem_pipeline', 'out')
-SRC = 'D:/桌面/AIzuopin/痴呆/稿件正文_Manuscript.docx'
-DST = 'D:/桌面/AIzuopin/痴呆/稿件正文_修订版_20261013.docx'
+OUT = os.environ.get('DEM_OUT', os.path.join(BASE, 'out'))
+SRC = os.environ.get('DEM_SRC_DOCX', os.path.join(BASE, 'manuscript.docx'))
+DST = os.environ.get('DEM_DST_DOCX', os.path.join(BASE, 'manuscript_revised.docx'))
 WORK = BASE
 
 # ---------------------------------------------------------------- 数字表
@@ -134,7 +134,7 @@ rep('The global score was the mean of the available domain scores (memory, execu
     '方法：认知域集逐库锁定')
 
 rep('Because grip strength and gait speed are missing in 60–99 % of these cohorts, the model containing them was treated as a sensitivity analysis rather than a primary specification.',
-    'Because grip strength and gait speed are missing in 5–100 % of these cohorts (never measured in ELSA, HRS or MHAS), the model containing them was estimable in only three cohorts and was treated as a sensitivity analysis rather than a primary specification. Baseline cognitive performance is likewise not a covariate of the primary model, and this was deliberate: the outcome criterion is a threshold on the same global score, and entry required that score to lie above the threshold, so the variable is simultaneously the measurement instrument and the conditioning variable of the sampling frame. Adjusting for it would condition on the selection rule, would partially adjust away a relation that may run from the same underlying vulnerability to both cognition and the syndromes, and — as we verified — is numerically fragile: entering the score continuously destabilised the fit in one cohort, a direct sign of the collinearity created by conditioning on the entry criterion. We nevertheless fitted the model with the score entered as cohort-specific quartile indicators, which keeps all six cohorts estimable. Because the score is standardised within education strata, we also ran the same model with the continuous score and without the education terms.',
+    'Because grip strength and gait speed are missing in 5–100 % of these cohorts (never measured in ELSA, HRS or MHAS), the model containing them was estimable in only three cohorts and was treated as a sensitivity analysis rather than a primary specification. Baseline cognitive performance is likewise not a covariate of the primary model, and this was deliberate: the outcome criterion is a threshold on the same global score, and entry required that score to lie above the threshold, so the variable is simultaneously the measurement instrument and the conditioning variable of the sampling frame. Adjusting for it would condition on the selection rule, would partially adjust away a relation that may run from the same underlying vulnerability to both cognition and the syndromes, and — as we verified — is numerically fragile: entering the score continuously destabilised the fit in one cohort, a direct sign of the collinearity created by conditioning on the entry criterion. We nevertheless fitted the model with the score entered as cohort-specific quartile indicators, which keeps all six cohorts estimable. Because the score is standardized within education strata, we also ran the same model with the continuous score and without the education terms.',
     '方法：M4 可得性')
 
 rep('The exposure was defined only when all three components were non-missing, which removed 255 of 74,756 otherwise eligible participants (0.34 %). The remaining 2.5 % difference between the 74,501 participants with a complete exposure and the 72,624 with a complete covariate set was almost entirely attributable to body mass index, which was missing in 14.7 % of ELSA and 3.5 % of CHARLS participants and less than 1.1 % elsewhere. Because participants with missing covariates were older and more often disabled than those with complete data (mean age 66.7 vs 64.3 years; disability 33.9 % vs 19.1 %), missingness was not assumed to be completely at random.',
@@ -149,7 +149,7 @@ rep('The exposure was defined only when all three components were non-missing, w
 
 # ================================================================ 结果
 rep('The 74,501 participants contributed 653,953 person-years (median follow-up 8 years, IQR 6–13) and 10,848 incident dementia cases (14.6 %; incidence density 16.6 per 1,000 person-years). Mean age was 64.4 years (SD 9.4) and 44.9 % were male (Table 1). Nearly half (49.3 %) had no geriatric syndrome at baseline, 31.5 % had one, 14.1 % had two and 5.1 % had all three. Every characteristic examined varied monotonically across the DAI strata: mean age rose from 62.3 to 68.5 years, the mean number of chronic conditions from 0.4 to 2.7, the proportion with low education from 48.8 % to 79.5 %, and the dementia incidence density from 12.1 to 31.5 per 1,000 person-years. Standardized mean differences between the DAI = 3 and DAI = 0 strata were large for the component-related variables (3.44) and substantial for age (0.68), education (0.61) and alcohol use (−0.60), indicating that the index captures a genuinely different risk stratum rather than a re-labelling of age.',
-    'The %s participants contributed %s person-years (median follow-up %s years, IQR %s–%s) and %s incident dementia cases (%s %%; incidence density %s per 1,000 person-years). Mean age was %s years and %s were male (Table 1). Half (%s %%) had no geriatric syndrome at baseline, %s %% had one, %s %% had two and %s %% had all three. Every characteristic examined varied monotonically across the DAI strata: mean age rose from %s to %s years, the mean number of chronic conditions from %s to %s, the proportion with low education from %s %% to %s %%, and the dementia incidence density from %s to %s per 1,000 person-years. Standardized mean differences between the DAI = 3 and DAI = 0 strata were large for the component-related variables (%s) and substantial for education (%s), age (%s) and alcohol use (%s), indicating that the index captures a genuinely different risk stratum rather than a re-labelling of age. The event proportion and the incidence density are of the order reported for these cohorts and for comparable harmonized ageing populations; part of the difference from clinically verified incidence is expected, because an algorithmic criterion applied at each wave is more inclusive than a clinical diagnosis and does not require confirmation at two consecutive assessments (Additional file 1: Table S3c).'
+    'The %s participants contributed %s person-years (median follow-up %s years, interquartile range %s–%s) and %s incident dementia cases (%s %%; incidence density %s per 1,000 person-years). Mean age was %s years and %s were male (Table 1). Half (%s %%) had no geriatric syndrome at baseline, %s %% had one, %s %% had two and %s %% had all three. Every characteristic examined varied monotonically across the DAI strata: mean age rose from %s to %s years, the mean number of chronic conditions from %s to %s, the proportion with low education from %s %% to %s %%, and the dementia incidence density from %s to %s per 1,000 person-years. Standardized mean differences between the DAI = 3 and DAI = 0 strata were large for the component-related variables (%s) and substantial for education (%s), age (%s) and alcohol use (%s), indicating that the index captures a genuinely different risk stratum rather than a re-labelling of age. The event proportion and the incidence density are of the order reported for these cohorts and for comparable harmonized ageing populations; part of the difference from clinically verified incidence is expected, because an algorithmic criterion applied at each wave is more inclusive than a clinical diagnosis and does not require confirmation at two consecutive assessments (Additional file 1: Table S3c).'
     % (n('n_analytic', 0), n('person_years', 0), n('fu_median', 0), n('fu_q1', 0), n('fu_q3', 0),
        n('n_events', 0), n('event_pct', 1), n('incidence_density', 1), n('age_mean', 1),
        pct('male_pct'), n('dai_pct_0', 1), n('dai_pct_1', 1), n('dai_pct_2', 1), n('dai_pct_3', 1),
@@ -194,7 +194,7 @@ rep('the pooled HRs were: all three 1.81 (1.61–2.03); disability plus depressi
     '结果：八类')
 
 rep("Harrell's C was 0.7225 for the index versus 0.7246 for a model containing the three dichotomous components (ΔC = −0.002). Relative to a traditional risk-factor model, the index improved discrimination modestly but consistently: Harrell's C rose from 0.7157 to 0.7225, a pooled ΔC of +0.0066 (95 % CI +0.0052 to +0.0080; I² = 0.0 %; k = 6; P < 0.001), with the difference positive in 6 of 6 cohorts. A first-principal-component weighted index gave 1.44 per SD (I² = 57.9 %) with near-equal loadings (0.53–0.63), indicating that the equal-weighting assumption is close to optimal in these data.",
-    "Harrell's C was %s for the index versus %s for a model containing the three dichotomous components (ΔC = %s). Pooled over the five cohorts in which the comparison was estimable, the paired bootstrap difference in C was %s (95 %% CI %s to %s), with the whole interval inside a non-inferiority margin of %s; the integer count therefore loses no measurable information relative to the full specification. A first-principal-component weighted index gave %s per SD with near-equal loadings (%s–%s, explaining %s %% of the variance; Table S3), indicating that the equal-weighting assumption is close to optimal in these data."
+    "Harrell's C was %s for the index versus %s for a model containing the three dichotomous components (ΔC = %s). Pooled over the five cohorts in which the comparison was estimable, the paired bootstrap difference in C was %s (95 %% CI %s to %s), with the whole interval inside a non-inferiority margin of %s; the integer count therefore loses no measurable information relative to the full specification. A first-principal-component weighted index gave %s per standard deviation with near-equal loadings (%s–%s, explaining %s %% of the variance; Table S3), indicating that the equal-weighting assumption is close to optimal in these data."
     % (n('c_dai', 4), n('c_comp', 4), n('c_delta', 4), n('dc_boot', 4),
        n('dc_boot_lo', 4), n('dc_boot_hi', 4), n('dc_margin', 2), ci('pc1_hr'),
        n('pc1_load_disab'), n('pc1_load_multi'), n('pc1_var', 1)),
@@ -575,20 +575,20 @@ rep('Luo and colleagues reported that frailty progression raised and frailty rev
     'rather than a deficit-accumulation frailty index or a five-domain composite \u2014 and in the design: the '
     'association survives a 4\u20136-year exposure\u2013outcome separation, and the minimal count index loses no '
     'discrimination relative to a full multivariate specification of the same components (\u0394C = \u22120.0016), '
-    'so a weighted or domain-based composite [39] is not required to capture the association.',
+    'so a weighted or domain-based composite [39] is not required to capture the association. Two further multicohort analyses address adjacent exposures. Fang and colleagues used a harmonized 25-item frailty index in four of the same cohorts and asked whether frailty reversal lowers dementia risk, treating depressive symptoms as a mediator [42]; Hou and colleagues modelled the cumulative burden, duration, trajectory and variability of depressive symptoms alone in four cohorts [43]. Neither counts multimorbidity as a component of the exposure, neither uses a minimal three-item index assembled from each survey\u2019s core instrument, and neither applies the time-lagged series reported here; the present analysis therefore extends that work rather than duplicating it.',
     '讨论：与 2026 年三篇近邻的对照（补引 39-41）')
 
 
 # ================================================================ 2026-10-13 投稿前完善
 # —— 题头作者与单位（按同门延续署名；须由通讯作者最终确认）、表数、Declarations
 rep('[Author 1]\u00b9, [Author 2]\u00b9, [Author 3]\u00b2, [Senior author]\u00b9,*',
-    'Qingcai Miao\u00b9\u00b2, Jianhong Cen\u00b9, Lu Chen\u00b9, Runzhi Lu\u00b9, Renjie Zhang\u00b9,*',
+    'Qingcai Miao\u00b3, Jianhong Cen\u00b3, Lu Chen\u00b3, Runzhi Lu\u00b3, Renjie Zhang\u00b9,\u00b2,*',
     '题头：作者名单')
 rep('\u00b9 [Department / Institution, City, Country]',
-    '\u00b9 Department of Cardiology, Handan First Hospital, No. 25 Congtai Road, Handan 056002, Hebei, China',
+    '\u00b9 Department of Cardiology (Cardiology Unit I), Handan First Hospital, No. 25 Congtai Road, Handan 056000, Hebei, China',
     '题头：单位 1')
 rep('\u00b2 [Department / Institution, City, Country]',
-    '\u00b2 Hebei North University, Zhangjiakou, Hebei, China',
+    '\u00b2 Handan Key Laboratory of Cardiac Precision Medicine, Handan First Hospital, No. 25 Congtai Road, Handan 056000, Hebei, China',
     '题头：单位 2')
 
 # ---- Declarations
@@ -679,6 +679,20 @@ rep('No adjustment for multiple testing was applied and the interaction results 
     'Multiplicity across the six modifiers was addressed by the Benjamini\u2013Hochberg procedure, as '
     'described below, and the interaction results are presented as exploratory.',
     'P1-3 多重比较口径统一')
+
+# (C6) MDPI 体例：缩写首次出现必须给出定义（逐条对应首次使用处）
+rep('at least one basic activity of daily living (bathing',
+    'at least one basic activity of daily living (ADL; bathing',
+    '缩写 ADL 定义')
+rep('at least one instrumental activity of daily living (preparing',
+    'at least one instrumental activity of daily living (IADL; preparing',
+    '缩写 IADL 定义')
+rep('alcohol use and BMI (M2, primary)',
+    'alcohol use and body mass index (BMI; M2, primary)',
+    '缩写 BMI 定义')
+rep('below the education-specific mean minus 1.5 SD)',
+    'below the education-specific mean minus 1.5 standard deviations)',
+    'SD 展开（释义而非缩写）')
 
 RULES = R
 

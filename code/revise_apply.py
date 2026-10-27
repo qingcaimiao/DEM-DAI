@@ -12,9 +12,14 @@ import html
 import shutil
 import zipfile
 
-from revise_ms import RULES, PIDX, DST, WORK, V, n
+from revise_ms import RULES, PIDX, DST, SRC, WORK, V, n
 
-XML = open(os.path.join(WORK, '_ms', 'word', 'document.xml'), encoding='utf-8').read()
+_MS = os.path.join(WORK, '_ms')
+if not os.path.isdir(_MS):          # 首次运行时从源稿解包（不改变任何替换逻辑）
+    import zipfile as _zf
+    with _zf.ZipFile(SRC) as _z:
+        _z.extractall(_MS)
+XML = open(os.path.join(_MS, 'word', 'document.xml'), encoding='utf-8').read()
 used = {}
 
 
@@ -137,9 +142,7 @@ new_paras = []
 # 这些占位段的文本被拆进多个 <w:t> run，逐 run 替换无法命中，故按"整段文本 == 原串"重建该段。
 PARA_REPL = [
     ('\\* Corresponding author: [Name], [Postal address], [City, Country]. E-mail: [e-mail]',
-     ['* Corresponding author: Renjie Zhang, Department of Cardiology, Handan First Hospital, '
-      'No. 25 Congtai Road, Handan 056002, Hebei, China. E-mail: zhangrenjie725@sina.com. '
-      'ORCID: 0009-0009-4026-2068.',
+     ['* Corresponding author: Renjie Zhang, Department of Cardiology (Cardiology Unit I), Handan First Hospital, No. 25 Congtai Road, Handan 056000, Hebei, China. E-mail: zhangrenjie725@sina.com. ORCID: 0009-0009-4026-2068.',
       'ORCID: Qingcai Miao 0009-0006-1479-6726; Renjie Zhang 0009-0009-4026-2068.']),
     ('Tables: 4 main, 6 supplementary. Figures: 4 main.',
      'Tables: 10 main (Tables 1, 2A, 2B, 3A, 3B, 3C, 4A, 4B, 4C, 4D); 17 supplementary '
@@ -216,8 +219,14 @@ REF_NEW = [
     'PMID: 42723149.',
     'Peng L, Chen Z, Li L, Zhang S. Frailty, trajectories of frailty, and cognitive impairment: evidence from five '
     'longitudinal cohort studies. BMC Public Health. 2026;26(1):2349. doi:10.1186/s12889-026-28715-0. '
-    'PMID: 42595986.',
+    'PMID: 42595986.',    'Fang J, Cheng W, Li H, Ho K, Yang C, Zhang Y, et al. Frailty transitions, depressive symptoms, and incident '
+    'dementia: findings from four longitudinal studies. J Affect Disord. 2026;414:122381. '
+    'doi:10.1016/j.jad.2026.122381. PMID: 42600788.',
+    'Hou Z, Ming Y, Lu K, Ma Y, Jia R, Lai G, et al. Cumulative and variable depression symptom exposure and '
+    'incident dementia: Panel data analysis of four longitudinal cohort studies. Alzheimers Dement. '
+    '2025;21(11):e70950. doi:10.1002/alz.70950. PMID: 41313677.',
 ]
+
 _anchor = 'White IR, Royston P. Imputing missing covariate values for the Cox model.'
 for _i, _p in enumerate(paras):
     if _anchor in para_text(_p):
@@ -228,7 +237,7 @@ for _i, _p in enumerate(paras):
         _frag = ''.join('<w:p>%s<w:r>%s<w:t xml:space="preserve">%s</w:t></w:r></w:p>'
                         % (_ppr, _rpr, esc(_r)) for _r in REF_NEW)
         XML = XML.replace(_p, _p + _frag, 1)
-        used['参考文献补引 39-41'] = 1
+        used['参考文献补引 39-43'] = 1
         print('已在 ref 38 之后追加 3 条参考文献（39-41）')
         break
 else:
@@ -259,6 +268,9 @@ _INS = [
       'from bed, toileting and walking; the harmonized instrument therefore substitutes walking for the '
       'continence item of the original Katz index, and walking was retained because it is the item measured '
       'consistently in every cohort.']),
+    # ⑥ 单位 3（河北北方学院）：插在单位 2 之后（2026-10-14 按作者更正为三单位制）
+    ('\u00b2 Handan Key Laboratory of Cardiac Precision Medicine',
+     ['\u00b3 Hebei North University, No. 11 Diamond South Road, Zhangjiakou Economic Development Zone, Zhangjiakou 075000, Hebei, China']),
     # ⑤ Additional file 1 目录：补齐 S7–S13
     ('Table S6 Cohort-specific total, direct and indirect effects',
      ['Table S7 Exposure trajectory-specific incidence densities by cohort.',
@@ -279,21 +291,29 @@ _INS = [
       'would build the exposure out of the outcome domain. The number was fixed at seven because these are the '
       'conditions ascertained identically across all six cohorts.']),
 ]
+# 2026-10-14 修复（严重）：锚点必须在**规则应用之后**的 XML 上重新扫描。
+# 原实现在「规则前的段落快照」上匹配锚点、却在「规则已改写的 XML」上做 replace：
+# 一旦某条规则改动了锚点所在段（例如给 ADL/IADL 补缩写定义），replace 静默失配，
+# 被追加的段落整段丢失且不计入「未命中规则数」——曾导致 Katz 说明段凭空消失。
 for _key, _lines in _INS:
-    for _p in paras:
+    _hit = None
+    for _p in para_pat.findall(XML.split('<w:body>')[1]):
         if _key in para_text(_p):
-            _ppr = re.search(r'<w:pPr>.*?</w:pPr>', _p, re.S)
-            _ppr = _ppr.group(0) if _ppr else ''
-            _rpr = re.search(r'<w:rPr>.*?</w:rPr>', _p, re.S)
-            _rpr = _rpr.group(0) if _rpr else ''
-            _frag = ''.join('<w:p>%s<w:r>%s<w:t xml:space="preserve">%s</w:t></w:r></w:p>'
-                            % (_ppr, _rpr, esc(_l)) for _l in _lines)
-            XML = XML.replace(_p, _p + _frag, 1)
-            used['投稿前插入段落：%s' % _key[:26]] = 1
-            print('已插入段落：', _lines[0][:64])
+            _hit = _p
             break
-    else:
+    if _hit is None:
         raise SystemExit('!! 未找到插入锚点：%s' % _key[:60])
+    _ppr = re.search(r'<w:pPr>.*?</w:pPr>', _hit, re.S)
+    _ppr = _ppr.group(0) if _ppr else ''
+    _rpr = re.search(r'<w:rPr>.*?</w:rPr>', _hit, re.S)
+    _rpr = _rpr.group(0) if _rpr else ''
+    _frag = ''.join('<w:p>%s<w:r>%s<w:t xml:space="preserve">%s</w:t></w:r></w:p>'
+                    % (_ppr, _rpr, esc(_l)) for _l in _lines)
+    _n0 = len(XML)
+    XML = XML.replace(_hit, _hit + _frag, 1)
+    assert len(XML) > _n0, '插入未生效（锚点串在替换时未命中）：%s' % _key[:60]
+    used['投稿前插入段落：%s' % _key[:26]] = 1
+    print('已插入段落：', _lines[0][:64])
 
 # ------------------------------------------------ 字数回填
 body = XML.split('<w:body>')[1]

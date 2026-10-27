@@ -9,7 +9,7 @@ import pandas as pd
 from scipy import stats
 
 warnings.filterwarnings('ignore')
-ROOT = 'D:/shujuku/'
+ROOT = os.environ.get('DEM_ROOT', 'D:/shujuku/')   # or set the DEM_ROOT env var
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'out')
 os.makedirs(OUT, exist_ok=True)
 

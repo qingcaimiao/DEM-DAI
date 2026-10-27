@@ -15,9 +15,11 @@ import json
 import shutil
 import zipfile
 
-OUT = r'D:/workbuddygongzuokongjian/2026-10-12-21-32-15/dem_pipeline/out'
-SRC = r'D:/桌面/AIzuopin/痴呆/稿件正文_修订版_20261013.docx'
-DST = r'D:/桌面/AIzuopin/痴呆/稿件正文_修订稿_v4_20261013.docx'
+# Paths are parameterised: override with environment variables if needed.
+_BASE = os.path.dirname(os.path.abspath(__file__))
+OUT = os.environ.get('DEM_OUT', os.path.join(_BASE, 'out'))
+SRC = os.environ.get('DEM_SRC_DOCX', os.path.join(_BASE, 'manuscript_revised.docx'))
+DST = os.environ.get('DEM_DST_DOCX', os.path.join(_BASE, 'manuscript_v4.docx'))
 FONT = ('<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" '
         'w:eastAsia="Times New Roman" w:cs="Times New Roman"/>')
 BORD = ('<w:tblBorders><w:top w:val="single" w:color="CBCDD1" w:sz="6" w:space="0"/>'
@@ -139,6 +141,9 @@ for t in ins:
 
 # 2026-10-13：Table 4A 列名更精确（原为 "Ratio of pooled effects"），并保持反斜杠校验
 body = body.replace('Ratio of pooled effects', 'Ratio of pooled coefficients')
+# 2026-10-14：这两个表头过长、把列宽顶满（渲染后看似出格）→ 精简措辞，注中仍保留完整解释
+body = body.replace('Mediated proportion (95 % CI)', 'Mediated % (95 % CI)')
+body = body.replace('Ratio of pooled coefficients', 'Ratio (pooled)')
 body = body.replace('The ratio of pooled effects, 1', 'The ratio of pooled coefficients, 1')
 newdoc = head + '<w:body>' + body + tail
 assert newdoc.count('\\') == 0, '出现反斜杠'

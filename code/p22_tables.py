@@ -120,8 +120,9 @@ T1P.to_csv(os.path.join(OUT, 'Table1_pooled.csv'), index=False, encoding='utf-8-
 
 TABLES.append(dict(
     key='T1', anchor_text='(Table 1).',
-    cap='Table 1 Baseline characteristics of the 71,867 participants by number of '
-        'geriatric syndromes',
+    # 2026-10-14：表题中的样本量改为取键（原为字面量 71,867 —— 值虽正确，但违反"统计量不得手写"）
+    cap='Table 1 Baseline characteristics of the %s participants by number of '
+        'geriatric syndromes' % n_(V['n_analytic']),
     note='DAI, disability\u2013multimorbidity\u2013depression index; py, person-years. '
          'Values are means or percentages unless stated otherwise. The DAI counts how many '
          'of the three syndromes (disability, multimorbidity, depression) are present.',
@@ -314,9 +315,10 @@ for key in ['dem_alg_edu', 'dem_alg', 'dem_alg25', 'dem_pub']:
 # Table 4D 表注必须区分"同样本行"与"异样本行"：dem_pub 只在 3 个队列可得，n 与其余行不同。
 # 2026-10-14：原表注写 "Every row is estimated on the same 66,765 participants"，与
 # dem_pub 行（k=3, n=27,425）矛盾（外部审稿）。此处从 _alt_outcomes/_alt_pool 取值修正。
-_r_pub = ALT[ALT['outcome'] == 'dem_pub'].iloc[0]
-_k_pub, _n_pub = int(_r_pub['k']), int(_r_pub['n'])
-assert _k_pub == 3 and _n_pub == 27425, 'Table 4D dem_pub 行 k/n 变动：%d/%d' % (_k_pub, _n_pub)
+# 2026-10-14：改从数字源 _ms_numbers.csv 取值（原从 _alt_pool 直读，致 27,425 无法被 p18 溯源）
+_k_pub, _n_pub = int(float(V['alt_dem_pub_k'])), int(float(V['alt_dem_pub_n']))
+assert _k_pub == int(ALT[ALT['outcome'] == 'dem_pub'].iloc[0]['k']), 'k 与 _alt_pool 不一致'
+assert _n_pub == int(ALT[ALT['outcome'] == 'dem_pub'].iloc[0]['n']), 'n 与 _alt_pool 不一致'
 # 保守截尾：与主结局同一结局、不同随访规则
 TS2 = csv('_tsens.csv')
 _q = L.dl_meta(TS2['coef'], TS2['se'], 'tsens')

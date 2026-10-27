@@ -22,8 +22,16 @@ SRC2 = os.path.join(D, '附加材料_Additional_file_2_STROBE_20261013.docx')
 DST1 = os.path.join(PKG, 'Supplementary_Materials_1_Methods_and_Tables.docx')
 DST2 = os.path.join(PKG, 'Supplementary_Materials_2_STROBE_Checklist.docx')
 
+REPO = 'https://github.com/qingcaimiao/DEM-DAI'
+CONCEPT_DOI = 'https://doi.org/10.5281/zenodo.23356045'
+
 RULES1 = [
     ('Additional file 1', 'Supplementary Materials', 1),
+    # 代码可得性：由"向通讯作者索取"改为公开仓库 + Concept DOI
+    ('Analysis scripts, harmonization dictionaries and intermediate result files are available from '
+     'the corresponding author on reasonable request.',
+     'Analysis scripts, harmonization dictionaries and intermediate result files are openly available '
+     'at %s, archived at %s.' % (REPO, CONCEPT_DOI), 1),
 ]
 RULES2 = [
     # 过期编号（真实缺陷）：主表已 10 张、补充表已 17 张

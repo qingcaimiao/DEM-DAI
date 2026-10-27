@@ -532,8 +532,10 @@ if len(_fgc):
               % (_dk, n_(_dev)) +
               'category-specific ordering on the subdistribution scale is not interpretable and is not '
               'used in the main text to rank the syndromes. The one category to which the main text '
-              'refers is multimorbidity alone, whose cause-specific estimate of 0.89 lies below unity '
-              'while its subdistribution estimate does not.',
+              # 2026-10-14：原为字面量 0.89（值正确但违反"统计量不得手写"）→ 改为取键
+              'refers is multimorbidity alone, whose cause-specific estimate of %s lies below unity '
+              'while its subdistribution estimate does not.'
+              % ('%.2f' % V['t3C_Multimorbidity_only_hr']),
               colw=[2400, 1700, 900, 900, 1900, 900])
 
 _res = csv('_re_sens.csv')

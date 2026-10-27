@@ -16,7 +16,7 @@ import zipfile
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(BASE, 'out')
-DOCX = 'D:/桌面/AIzuopin/痴呆/稿件正文_修订稿_v4_20261013.docx'
+DOCX = os.environ.get('DEM_DOCX', 'D:/桌面/AIzuopin/痴呆/稿件正文_修订稿_v4_20261013.docx')
 
 # ------------------------------------------------ 载入数字表
 V = {}
@@ -88,7 +88,8 @@ CTX_WL = [
     r'ORCID:\s*[\d\u2013\-]+',            # 题头 ORCID（非统计量）
     r'\d{4}',                             # ORCID 四位数分组（0009 / 6726 等）
     r'[\w\.\-]+@[\w\.\-]+',               # 邮箱地址
-    r'056002',                                 # 通讯地址邮编
+    r'056000',                                 # 通讯地址邮编（2026-10-14 由 056002 更正）
+    r'075000',                                 # 河北北方学院邮编
     r'No\.\s*25\s*Congtai\s*Road',            # 通讯地址门牌号
     r'Word count:\s*Abstract',            # 题头字数（脚本自己回填）
     r'main text',                         # 同上
@@ -108,13 +109,27 @@ def main():
     body_notbl = re.sub(r'<w:tbl>.*?</w:tbl>', '', body, flags=re.S)
     print('正文段落审计：已剥离表格 %d 张（其数值由 p26 单独审计）' % n_tbl)
     paras = re.findall(r'<w:p[ >].*?</w:p>', body_notbl, re.S)
-    text = '\n'.join(html.unescape(''.join(re.findall(r'<w:t[^>]*>(.*?)</w:t>', p, re.S)))
-                     for p in paras)
+    # 2026-10-14：MDPI 版章节采用 "2.4." / "3.1." 式编号，其编号会被 TOK 误当数值。
+    # 标题段的编号不是统计量，直接整段剔除。
+    _HEAD = re.compile(r'^\s*\d{1,2}\.\d{1,2}\.\s+\S')
+    _pt = []
+    for p in paras:
+        t = html.unescape(''.join(re.findall(r'<w:t[^>]*>(.*?)</w:t>', p, re.S)))
+        if _HEAD.match(t.strip()):
+            continue
+        _pt.append(t)
+    text = '\n'.join(_pt)
     text = re.sub(r'\s+', ' ', text)
 
     # 找出参考文献区，参考文献的卷/页数字不参与核验
-    ref_i = text.find('Livingston G, Huntley J')
-    main_text = text[:ref_i] if ref_i > 0 else text
+    # 2026-10-14：参考文献起始标记改为格式无关（MDPI 版首条作者写法为 "Livingston, G.; Huntley, J.;"）
+    ref_i = text.find('References Livingston')
+    if ref_i < 0:
+        ref_i = text.find('Livingston G, Huntley J')      # BMC 旧格式兜底
+    if ref_i < 0:
+        ref_i = text.find('Livingston, G.')
+    assert ref_i > 0, '未找到参考文献起始位置，无法剥离参考文献区'
+    main_text = text[:ref_i]
 
     TOK = re.compile(r'\d[\d,]*(?:\.\d+)?')
     bad = []

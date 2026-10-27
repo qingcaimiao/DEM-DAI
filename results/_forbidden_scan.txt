@@ -3,11 +3,11 @@
 检查文件：4 个
 
 --------------------------------------------------------------------------
-正文终稿  (95,070 字符)
-  正确形计数：multicohort=4；time-varying=11；time-lagged=4；fcaf222=1；j.jnha.2026.100983=1；alz.71821=1；Benjamini=4；DerSimonian–Laird=10
+正文终稿  (102,558 字符)
+  正确形计数：multicohort=5；time-varying=13；time-lagged=5；fcaf222=1；j.jnha.2026.100983=1；alz.71821=1；Benjamini=5；DerSimonian–Laird=10
 
 --------------------------------------------------------------------------
-Additional file 1  (46,527 字符)
+Additional file 1  (47,091 字符)
   正确形计数：multicohort=0；time-varying=7；time-lagged=1；fcaf222=0；j.jnha.2026.100983=0；alz.71821=0；Benjamini=2；DerSimonian–Laird=3
 
 --------------------------------------------------------------------------
@@ -15,7 +15,7 @@ Additional file 2  (13,937 字符)
   正确形计数：multicohort=0；time-varying=4；time-lagged=2；fcaf222=0；j.jnha.2026.100983=0；alz.71821=0；Benjamini=0；DerSimonian–Laird=1
 
 --------------------------------------------------------------------------
-Supplementary Methods (md)  (22,758 字符)
+Supplementary Methods (md)  (23,323 字符)
   正确形计数：multicohort=0；time-varying=1；time-lagged=1；fcaf222=0；j.jnha.2026.100983=0；alz.71821=0；Benjamini=0；DerSimonian–Laird=1
 
 ==========================================================================

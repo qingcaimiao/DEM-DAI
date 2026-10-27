@@ -22,7 +22,7 @@ plt.rcParams.update({'font.family': 'Arial', 'text.color': '#111111',
 
 NAVY, TEAL, AMBER, RED, GREY, LINE = '#1f4e79', '#2e8b8b', '#c97b1e', '#a83232', '#5a6672', '#9aa5b1'
 
-fig = plt.figure(figsize=(11.0, 5.6))
+fig = plt.figure(figsize=(11.0, 7.2))
 ax = fig.add_axes([0, 0, 1, 1])
 ax.set_xlim(0, 100)
 ax.set_ylim(0, 56)
@@ -46,9 +46,9 @@ def arrow(x1, y1, x2, y2, color=LINE, lw=2.0):
 
 
 # ---- 左：三种综合征
-comps = [('Disability', 'At least one ADL or IADL limitation', NAVY),
-         ('Multimorbidity', 'Two or more physician-diagnosed chronic conditions', TEAL),
-         ('Depression', 'Above a harmonized cohort-specific threshold', AMBER)]
+comps = [('Disability', '≥ 1 ADL or IADL limitation', NAVY),
+         ('Multimorbidity', '≥ 2 physician-diagnosed conditions', TEAL),
+         ('Depression', 'Above cohort-specific threshold', AMBER)]
 for i, (name, desc, col) in enumerate(comps):
     y = 36 - i * 11.5
     box(1.5, y, 26, 9.4, col, col)
@@ -63,7 +63,7 @@ arrow(28.0, 17.7, 35.0, 26.0)
 # ---- 中：DAI 指数
 solid(35.5, 22.0, 25.0, 14.5, '#1f4e79')
 ax.text(48.0, 32.6, 'Geriatric syndrome', fontsize=12.0, fontweight='bold', color=NAVY, ha='center')
-ax.text(48.0, 29.2, 'accumulation index (DAI)', fontsize=12.0, fontweight='bold', color=NAVY, ha='center')
+ax.text(48.0, 29.2, 'accumulation index', fontsize=12.0, fontweight='bold', color=NAVY, ha='center')
 ax.text(48.0, 25.0, 'unweighted count, range 0\u20133', fontsize=9.6, color=GREY, ha='center')
 
 arrow(61.0, 29.2, 68.0, 29.2, color=RED, lw=2.4)
@@ -97,6 +97,13 @@ ax.text(50, 2.2, 'CHARLS  ·  ELSA  ·  HRS  ·  KLoSA  ·  MHAS  ·  SHARE     
         fontsize=8.6, color=GREY, ha='center')
 
 out = os.path.join(PKG, 'Graphical_Abstract_JCM.png')
+# 2026-10-14：图形摘要按缩略图显示时字偏小 → 统一放大所有 Text 对象字号（几何不变）
+for _o in fig.findobj(match=lambda x: hasattr(x, 'get_fontsize') and hasattr(x, 'set_fontsize')):
+    try:
+        _o.set_fontsize(float(_o.get_fontsize()) * 1.30)
+    except Exception:
+        pass
+
 fig.savefig(out)
 plt.close(fig)
 

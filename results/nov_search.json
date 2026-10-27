@@ -1,11 +1,11 @@
 {
- "generated": "2026-10-13 10:05:16",
+ "generated": "2026-10-14 12:43:28",
  "tracks": {
   "concept": {
    "S1_three_syndrome_count": {
     "query": "((\"geriatric syndrome\" OR \"geriatric syndromes\") AND (\"accumulation\" OR \"count\" OR \"burden\") AND dementia AND (cohort OR longitudinal)) AND (FIRST_PDATE:[2018-01-01 TO 2026-12-31])",
     "status": "OK",
-    "hitCount": 2030,
+    "hitCount": 2046,
     "top": [
      {
       "title": "Burden of geriatric and cognitive disorders and the impact of integrated care models on morbidity, functional decline, and health service utilization among older adults.",
@@ -192,7 +192,7 @@
    "S2_dai_joint": {
     "query": "((disability OR \"functional limitation\") AND multimorbidity AND depression AND dementia AND (joint OR combined OR \"mutually exclusive\" OR \"all eight\" OR co-occurrence) AND cohort) AND (FIRST_PDATE:[2018-01-01 TO 2026-12-31])",
     "status": "OK",
-    "hitCount": 1654,
+    "hitCount": 1665,
     "top": [
      {
       "title": "Mind, Mood, and Mobility: Rethinking Functional Disability Prevention in Older Adults on the Basis of a Longitudinal Cohort From CHARLS.",
@@ -379,7 +379,7 @@
    "S3_harmonized_multi": {
     "query": "((CHARLS OR ELSA OR \"Health and Retirement Study\" OR HRS OR KLoSA OR MHAS OR SHARE OR \"Gateway to Global Aging\") AND dementia AND (frailty OR multimorbidity OR \"geriatric syndrome\" OR burden) AND (harmonized OR \"cross-cohort\" OR \"multi-cohort\")) AND (FIRST_PDATE:[2018-01-01 TO 2026-12-31])",
     "status": "OK",
-    "hitCount": 1900,
+    "hitCount": 1912,
     "top": [
      {
       "title": "Cardiometabolic multimorbidity and cognitive-functional transitions across international ageing cohorts",
@@ -517,15 +517,6 @@
       "authors": "Shao Z, Hu H, Ge X, Liu M, Duan Y, Guo X, Zhu D, Yi Z, Wei B."
      },
      {
-      "title": "Frailty transitions, depressive symptoms, and incident dementia: findings from four longitudinal studies.",
-      "journal": "J Affect Disord",
-      "year": "2026",
-      "pmid": "42600788",
-      "doi": "10.1016/j.jad.2026.122381",
-      "cited": 0,
-      "authors": "Fang J, Cheng W, Li H, Ho K, Yang C, Zhang Y, Zhang N, Zhang Y, Shen F, Wu X, Zhang M."
-     },
-     {
       "title": "The mediating effects of depressive symptoms on the association between hobby engagement and functional disability: evidence from three cohort studies.",
       "journal": "BMC Public Health",
       "year": "2026",
@@ -533,6 +524,15 @@
       "doi": "10.1186/s12889-026-29185-0",
       "cited": 0,
       "authors": "Yan JM, He QQ."
+     },
+     {
+      "title": "Frailty transitions, depressive symptoms, and incident dementia: findings from four longitudinal studies.",
+      "journal": "J Affect Disord",
+      "year": "2026",
+      "pmid": "42600788",
+      "doi": "10.1016/j.jad.2026.122381",
+      "cited": 0,
+      "authors": "Fang J, Cheng W, Li H, Ho K, Yang C, Zhang Y, Zhang N, Zhang Y, Shen F, Wu X, Zhang M."
      },
      {
       "title": "Multinational cohort study of health perception mismatch trajectories and risks of cognitive decline, depression, and mortality.",
@@ -566,7 +566,7 @@
    "S4_time_lagged": {
     "query": "(dementia AND (frailty OR multimorbidity OR disability OR \"geriatric syndrome\") AND (\"time-lagged\" OR \"lagged\" OR \"reverse causation\" OR \"reverse causality\" OR \"latency\" OR \"time-varying\") AND cohort) AND (FIRST_PDATE:[2018-01-01 TO 2026-12-31])",
     "status": "OK",
-    "hitCount": 5903,
+    "hitCount": 5947,
     "top": [
      {
       "title": "Trajectory-Oriented Brain Vulnerability Framework for Cognitive Decline in Type 2 Diabetes.",
@@ -587,15 +587,6 @@
       "authors": "Ward D, Zhou S, Haapanen M, Gordon E, Rockwood K, Hubbard R, Dawes P."
      },
      {
-      "title": "The impact of quality of primary care on secondary healthcare utilisation for patients with multiple long-term conditions",
-      "journal": "",
-      "year": "2026",
-      "pmid": "",
-      "doi": "10.64898/2026.08.13.26358683",
-      "cited": 0,
-      "authors": "Gao Q, Hayhoe B, Cicek M, Greenfield G, Otis M, Misirli G, Luisa Neves A, Majeed A, Aylin P, Bottle A."
-     },
-     {
       "title": "Dynamic frailty exposure and cognitive aging trajectories: A multicohort study.",
       "journal": "Alzheimers Dement",
       "year": "2026",
@@ -603,6 +594,15 @@
       "doi": "10.1002/alz.71821",
       "cited": 0,
       "authors": "Wang X, Hao H, Jiang T, Yao X, Duan Y, Xia J, Wang C, Liang J."
+     },
+     {
+      "title": "The impact of quality of primary care on secondary healthcare utilisation for patients with multiple long-term conditions",
+      "journal": "",
+      "year": "2026",
+      "pmid": "",
+      "doi": "10.64898/2026.08.13.26358683",
+      "cited": 0,
+      "authors": "Gao Q, Hayhoe B, Cicek M, Greenfield G, Otis M, Misirli G, Luisa Neves A, Majeed A, Aylin P, Bottle A."
      },
      {
       "title": "Smoking cessation, weight change, and incidence and progression of frailty: A longitudinal analysis of the US Health and Retirement Study.",
@@ -722,15 +722,6 @@
       "authors": "Law J."
      },
      {
-      "title": "Newly emerging IADL impairment predicts subsequent cognitive decline across four population-based aging cohorts.",
-      "journal": "Front Aging Neurosci",
-      "year": "2026",
-      "pmid": "42558462",
-      "doi": "10.3389/fnagi.2026.1829741",
-      "cited": 0,
-      "authors": "Xu X, Hao J, Fan Y, Huang Y, Huang Z, Zhang H."
-     },
-     {
       "title": "Frailty transitions and their association with mortality in older adults.",
       "journal": "Intern Med J",
       "year": "2026",
@@ -738,6 +729,15 @@
       "doi": "10.1111/imj.70502",
       "cited": 0,
       "authors": "Ataca E, Ataca MC, Heybeli C, Smith L, Veronese N, Tanriverdi I, Soysal P."
+     },
+     {
+      "title": "Newly emerging IADL impairment predicts subsequent cognitive decline across four population-based aging cohorts.",
+      "journal": "Front Aging Neurosci",
+      "year": "2026",
+      "pmid": "42558462",
+      "doi": "10.3389/fnagi.2026.1829741",
+      "cited": 0,
+      "authors": "Xu X, Hao J, Fan Y, Huang Y, Huang Z, Zhang H."
      },
      {
       "title": "Prescription Patterns of Benzodiazepines and Opioid Analgesics in Adults with and without Major Psychiatric Disorders: A Nationwide Cohort Study.",
@@ -753,7 +753,7 @@
    "S5_mediation_dep": {
     "query": "(dementia AND depression AND (mediation OR \"mediated proportion\" OR \"indirect effect\" OR \"four-way decomposition\") AND (frailty OR multimorbidity OR disability)) AND (FIRST_PDATE:[2018-01-01 TO 2026-12-31])",
     "status": "OK",
-    "hitCount": 2841,
+    "hitCount": 2859,
     "top": [
      {
       "title": "Burden of geriatric and cognitive disorders and the impact of integrated care models on morbidity, functional decline, and health service utilization among older adults.",
@@ -846,15 +846,6 @@
       "authors": "Shiratsuchi D, Makizako H, Akaida S, Tateishi M, Kiuchi Y, Kuratsu R, Kubozono T, Takenaka T, Kuwahata S, Ohishi M."
      },
      {
-      "title": "Mind, Mood, and Mobility: Rethinking Functional Disability Prevention in Older Adults on the Basis of a Longitudinal Cohort From CHARLS.",
-      "journal": "J Am Heart Assoc",
-      "year": "2026",
-      "pmid": "42432468",
-      "doi": "10.1161/jaha.125.048951",
-      "cited": 2,
-      "authors": "Ding L, Stephen R, Ekblom M, Wang HX, Heiland EG, Wang R."
-     },
-     {
       "title": "The asymmetric effect of social connection and the cumulative damage of comorbidities on physical and mental health of older Virginians",
       "journal": "Prev Med Rep",
       "year": "2026",
@@ -862,6 +853,15 @@
       "doi": "",
       "cited": 0,
       "authors": "Ochoki N, Wiles L, Zha P, Falco V, Rio C, Romero J, Saligan L."
+     },
+     {
+      "title": "Mind, Mood, and Mobility: Rethinking Functional Disability Prevention in Older Adults on the Basis of a Longitudinal Cohort From CHARLS.",
+      "journal": "J Am Heart Assoc",
+      "year": "2026",
+      "pmid": "42432468",
+      "doi": "10.1161/jaha.125.048951",
+      "cited": 2,
+      "authors": "Ding L, Stephen R, Ekblom M, Wang HX, Heiland EG, Wang R."
      },
      {
       "title": "Caregivers' burden and psychiatric morbidity among informal caregivers of older adults: results from a national survey.",
@@ -891,15 +891,6 @@
       "authors": "Li L, Wang J, Kang R, Zhang T, Chen Z."
      },
      {
-      "title": "Association between physical exercise and cognitive frailty among community-dwelling older adults: the mediating role of self-efficacy.",
-      "journal": "Front Public Health",
-      "year": "2026",
-      "pmid": "42625706",
-      "doi": "10.3389/fpubh.2026.1903378",
-      "cited": 0,
-      "authors": "Liang D, Jia R, Wu Z, Fan T, Pan Y."
-     },
-     {
       "title": "Reply to: Food insecurity and mortality in older adults: a prospective reconstruction.",
       "journal": "Aging Clin Exp Res",
       "year": "2026",
@@ -907,6 +898,15 @@
       "doi": "10.1007/s40520-026-03506-0",
       "cited": 0,
       "authors": "Gianfredi V, Nucci D, Soysal P, Maggi S, Castagna A, Cozza A, Baldo V, Veronese N."
+     },
+     {
+      "title": "Association between physical exercise and cognitive frailty among community-dwelling older adults: the mediating role of self-efficacy.",
+      "journal": "Front Public Health",
+      "year": "2026",
+      "pmid": "42625706",
+      "doi": "10.3389/fpubh.2026.1903378",
+      "cited": 0,
+      "authors": "Liang D, Jia R, Wu Z, Fan T, Pan Y."
      },
      {
       "title": "Cognitive impairment as a mediator of treatment discontinuation after intracerebral hemorrhage in acute leukemia.",
@@ -940,7 +940,7 @@
    "S6_trajectory": {
     "query": "(dementia AND (frailty OR multimorbidity OR \"geriatric syndrome\") AND (trajectory OR trajectories) AND (remitted OR reversal OR \"persistently\" OR \"changes in\")) AND (FIRST_PDATE:[2018-01-01 TO 2026-12-31])",
     "status": "OK",
-    "hitCount": 5780,
+    "hitCount": 5816,
     "top": [
      {
       "title": "Associations between dual sensory impairments and the new-onset cardiometabolic multimorbidity among middle-aged and older adults: the mediating role of frailty.",
@@ -1060,15 +1060,6 @@
       "authors": "Komel J, Klen J."
      },
      {
-      "title": "Dynamic frailty exposure and cognitive aging trajectories: A multicohort study.",
-      "journal": "Alzheimers Dement",
-      "year": "2026",
-      "pmid": "42723149",
-      "doi": "10.1002/alz.71821",
-      "cited": 0,
-      "authors": "Wang X, Hao H, Jiang T, Yao X, Duan Y, Xia J, Wang C, Liang J."
-     },
-     {
       "title": "Frailty transitions and their association with mortality in older adults.",
       "journal": "Intern Med J",
       "year": "2026",
@@ -1076,6 +1067,15 @@
       "doi": "10.1111/imj.70502",
       "cited": 0,
       "authors": "Ataca E, Ataca MC, Heybeli C, Smith L, Veronese N, Tanriverdi I, Soysal P."
+     },
+     {
+      "title": "Dynamic frailty exposure and cognitive aging trajectories: A multicohort study.",
+      "journal": "Alzheimers Dement",
+      "year": "2026",
+      "pmid": "42723149",
+      "doi": "10.1002/alz.71821",
+      "cited": 0,
+      "authors": "Wang X, Hao H, Jiang T, Yao X, Duan Y, Xia J, Wang C, Liang J."
      },
      {
       "title": "Long-Term Cognitive and Functional Outcomes of Anesthesia and Surgery in Patients with Dementia.",
@@ -1127,7 +1127,7 @@
    "S7_asia_latam": {
     "query": "(dementia AND (China OR Chinese OR Mexico OR Mexican OR Korea OR Korean) AND (frailty OR multimorbidity OR disability) AND (cohort OR longitudinal OR \"nationally representative\")) AND (FIRST_PDATE:[2018-01-01 TO 2026-12-31])",
     "status": "OK",
-    "hitCount": 20297,
+    "hitCount": 20465,
     "top": [
      {
       "title": "Association between intrinsic capacity and dementia risk in older Mexicans.",
@@ -1202,15 +1202,6 @@
       "authors": "Gianfredi V, Nucci D, Soysal P, Maggi S, Castagna A, Cozza A, Baldo V, Veronese N."
      },
      {
-      "title": "Characteristics, Healthcare Utilization, and Medical Expenditures of Home-Based Primary Care Users in Korea.",
-      "journal": "J Korean Med Sci",
-      "year": "2026",
-      "pmid": "42642821",
-      "doi": "10.3346/jkms.2026.41.e224",
-      "cited": 0,
-      "authors": "Kim CO, Koo HY, Lee JR, Kim S, Seo D, Jang SN, Yoon JL, Lee H."
-     },
-     {
       "title": "The mediating effects of depressive symptoms on the association between hobby engagement and functional disability: evidence from three cohort studies.",
       "journal": "BMC Public Health",
       "year": "2026",
@@ -1220,13 +1211,13 @@
       "authors": "Yan JM, He QQ."
      },
      {
-      "title": "Adverse Childhood Experiences and Life Course Adversity Related to Geriatric Syndromes: A Narrative Review.",
-      "journal": "Medicina (Kaunas)",
+      "title": "Characteristics, Healthcare Utilization, and Medical Expenditures of Home-Based Primary Care Users in Korea.",
+      "journal": "J Korean Med Sci",
       "year": "2026",
-      "pmid": "42075490",
-      "doi": "10.3390/medicina62040618",
+      "pmid": "42642821",
+      "doi": "10.3346/jkms.2026.41.e224",
       "cited": 0,
-      "authors": "Reyes-Ortiz CA, Castro-Florez X, Ocampo-Chaparro JM."
+      "authors": "Kim CO, Koo HY, Lee JR, Kim S, Seo D, Jang SN, Yoon JL, Lee H."
      },
      {
       "title": "Socioeconomic disparities in age at entry into Korea's Long-Term Care Insurance: a descriptive analysis of 1.07 million adults, 2008-2022.",
@@ -1236,6 +1227,15 @@
       "doi": "10.1186/s12913-026-15304-5",
       "cited": 0,
       "authors": "Noh JW, Kim J, Heo MH, Kwon YD."
+     },
+     {
+      "title": "Adverse Childhood Experiences and Life Course Adversity Related to Geriatric Syndromes: A Narrative Review.",
+      "journal": "Medicina (Kaunas)",
+      "year": "2026",
+      "pmid": "42075490",
+      "doi": "10.3390/medicina62040618",
+      "cited": 0,
+      "authors": "Reyes-Ortiz CA, Castro-Florez X, Ocampo-Chaparro JM."
      },
      {
       "title": "Aging with dual burdens: cross-national evidence on mortality among older Hispanic adults with diabetes and dementia.",
@@ -1314,7 +1314,7 @@
    "S8_minimal_index_practical": {
     "query": "(dementia AND (frailty OR multimorbidity OR disability) AND (screening OR \"risk stratification\" OR \"primary care\" OR \"routine assessment\") AND \"older adults\") AND (FIRST_PDATE:[2018-01-01 TO 2026-12-31])",
     "status": "OK",
-    "hitCount": 22225,
+    "hitCount": 22427,
     "top": [
      {
       "title": "Chronic Pain in Older Adults: Risk Factors and Prevention.",
@@ -1380,15 +1380,6 @@
       "authors": "Lauretani F, Testa C, Salvi M, Zucchini I, Merolla A, Rovere-Querini P, Maggio M."
      },
      {
-      "title": "Sex-specific multimorbidity clusters and all-cause mortality among community-dwelling older adults: findings from the ASPREE cohort.",
-      "journal": "J Gerontol A Biol Sci Med Sci",
-      "year": "2026",
-      "pmid": "42821655",
-      "doi": "10.1093/gerona/glag245",
-      "cited": 0,
-      "authors": "Du R, Vishwanath S, Wu Z, Phyo AZZ, Orchard SG, Sheets K, Ernst ME, Ryan J."
-     },
-     {
       "title": "Implementation of risk prediction and stratification approaches for ageing populations in Australian healthcare: a systematic review.",
       "journal": "Lancet Reg Health West Pac",
       "year": "2026",
@@ -1398,13 +1389,13 @@
       "authors": "Greene L, Brain J, Brown B, Burley CV, Burton E, Guan Z, Myers B, Ride K, Sabatini S, Siervo M, Tadesse AW, Hing Tang EY"
      },
      {
-      "title": "Silent neurovestibular frailty: a conceptual model integrating vestibular dysfunction, dual-task mobility and cognitive load as candidate contributors to falls, delirium and functional decline in older adults.",
-      "journal": "Front Aging Neurosci",
+      "title": "Sex-specific multimorbidity clusters and all-cause mortality among community-dwelling older adults: findings from the ASPREE cohort.",
+      "journal": "J Gerontol A Biol Sci Med Sci",
       "year": "2026",
-      "pmid": "42688266",
-      "doi": "10.3389/fnagi.2026.1879751",
+      "pmid": "42821655",
+      "doi": "10.1093/gerona/glag245",
       "cited": 0,
-      "authors": "Alowaydhah SM, Paul-Chima UO, Alfayyadh A, Alanazi S."
+      "authors": "Du R, Vishwanath S, Wu Z, Phyo AZZ, Orchard SG, Sheets K, Ernst ME, Ryan J."
      },
      {
       "title": "Anemia, iron deficiency, and blood biomarkers for Alzheimer disease: clinical interpretation and dementia risk stratification.",
@@ -1416,6 +1407,15 @@
       "authors": "Li Z, Ming Q, Fu L, Yang J, Lv Y, Chen B, Qiu X, Lu Z."
      },
      {
+      "title": "Silent neurovestibular frailty: a conceptual model integrating vestibular dysfunction, dual-task mobility and cognitive load as candidate contributors to falls, delirium and functional decline in older adults.",
+      "journal": "Front Aging Neurosci",
+      "year": "2026",
+      "pmid": "42688266",
+      "doi": "10.3389/fnagi.2026.1879751",
+      "cited": 0,
+      "authors": "Alowaydhah SM, Paul-Chima UO, Alfayyadh A, Alanazi S."
+     },
+     {
       "title": "Sex-specific multimorbidity clusters and all-cause mortality in relatively healthy older adults: findings from the ASPREE cohort",
       "journal": "",
       "year": "2026",
@@ -1423,15 +1423,6 @@
       "doi": "10.64898/2026.06.18.26355909",
       "cited": 0,
       "authors": "Du R, Vishwanath S, Wu Z, Phyo AZZ, Orchard SG, Sheets K, Ernst ME, Ryan J."
-     },
-     {
-      "title": "Prevalence and factors of frailty among community-dwelling older adults: a multimorbidity perspective.",
-      "journal": "Front Public Health",
-      "year": "2026",
-      "pmid": "42725090",
-      "doi": "10.3389/fpubh.2026.1854511",
-      "cited": 0,
-      "authors": "Feng S, Wang P, Huang H, Lin Z, Liu Y."
      },
      {
       "title": "Cognitive Impairment Across the Spectrum of Chronic Kidney Disease: Clinical Characteristics and Implications for Practice-Is There a Role for Medical Nutritional Therapy?",
@@ -1452,13 +1443,13 @@
       "authors": "Su CC, Lo YT, Yang YC, Yu YH, Cheng WC, Lin WP, Yang DC."
      },
      {
-      "title": "Utilization Patterns Among Heterogeneous Subgroups of Homebound Older Adults: A Latent Class Analysis.",
-      "journal": "J Am Geriatr Soc",
+      "title": "Prevalence and factors of frailty among community-dwelling older adults: a multimorbidity perspective.",
+      "journal": "Front Public Health",
       "year": "2026",
-      "pmid": "42394468",
-      "doi": "10.1111/jgs.70576",
-      "cited": 1,
-      "authors": "Young JL, Pomeroy ML, Charankevich H, Ornstein KA, Kinosian BP."
+      "pmid": "42725090",
+      "doi": "10.3389/fpubh.2026.1854511",
+      "cited": 0,
+      "authors": "Feng S, Wang P, Huang H, Lin Z, Liu Y."
      },
      {
       "title": "Intrinsic capacity impairment and modifiable associated factors among community-dwelling older adults with chronic diseases in China: a cross-sectional study.",
@@ -1468,6 +1459,15 @@
       "doi": "10.1136/bmjopen-2026-122642",
       "cited": 0,
       "authors": "Weng Y, Wang D, Ma L, Wang P, Wang X, Zhang Y, Zhang P, Xu Y."
+     },
+     {
+      "title": "Utilization Patterns Among Heterogeneous Subgroups of Homebound Older Adults: A Latent Class Analysis.",
+      "journal": "J Am Geriatr Soc",
+      "year": "2026",
+      "pmid": "42394468",
+      "doi": "10.1111/jgs.70576",
+      "cited": 1,
+      "authors": "Young JL, Pomeroy ML, Charankevich H, Ornstein KA, Kinosian BP."
      },
      {
       "title": "Role of Sociodemographic Variables in the Association Between Physical Performance and Balance Disorders in Older Adults.",
@@ -3591,15 +3591,6 @@
       "authors": "Reyes-Ortiz CA, Castro-Florez X, Ocampo-Chaparro JM."
      },
      {
-      "title": "Geriatric Syndromes and Mortality Among Hospitalized Older Adults.",
-      "journal": "JAMA Netw Open",
-      "year": "2026",
-      "pmid": "41591773",
-      "doi": "10.1001/jamanetworkopen.2025.55740",
-      "cited": 6,
-      "authors": "Avelino-Silva TJ, Roma MFB, Dutra AF, Malheiro A, Speranza ACC, Casale AMC, Lopes BNA, Almada-Filho CM, de Sousa DV, Mar"
-     },
-     {
       "title": "Geriatric syndromes and intrinsic capacity in intestinal failure: A comparative analysis between young adults and older adults.",
       "journal": "Clin Nutr ESPEN",
       "year": "2026",
@@ -3609,13 +3600,13 @@
       "authors": "Sandoval-Valdez DA, Reyes-Ramírez ALDC, Castillo-Martínez L, Serralde-Zúñiga AE."
      },
      {
-      "title": "The role of geriatric syndromes in moderating the relationship between cardiometabolic multimorbidity and cognitive function in mid-to-late life: a multicohort study",
-      "journal": "",
+      "title": "Geriatric Syndromes and Mortality Among Hospitalized Older Adults.",
+      "journal": "JAMA Netw Open",
       "year": "2026",
-      "pmid": "",
-      "doi": "10.21203/rs.3.rs-10519030/v1",
-      "cited": 0,
-      "authors": "Liu Y, Li X, Yang X, Liu G, Hong C, Huang Y, Guan B, Wang X, Chao C, Luo Y."
+      "pmid": "41591773",
+      "doi": "10.1001/jamanetworkopen.2025.55740",
+      "cited": 6,
+      "authors": "Avelino-Silva TJ, Roma MFB, Dutra AF, Malheiro A, Speranza ACC, Casale AMC, Lopes BNA, Almada-Filho CM, de Sousa DV, Mar"
      },
      {
       "title": "The Living Lab Concept in the Detection, Prevention and Monitoring of Geriatric Syndromes in Elderly Patients with Cardiovascular Disease-A Narrative Review.",
@@ -3625,6 +3616,15 @@
       "doi": "10.3390/jcm15124745",
       "cited": 0,
       "authors": "Pîslaru AI, Ștefăniu R, Baghiu MP, Istrate M, Albișteanu SM, Brumă BC, Turcu AM, Lungu ID, Ilie AC, Nistor I."
+     },
+     {
+      "title": "The role of geriatric syndromes in moderating the relationship between cardiometabolic multimorbidity and cognitive function in mid-to-late life: a multicohort study",
+      "journal": "",
+      "year": "2026",
+      "pmid": "",
+      "doi": "10.21203/rs.3.rs-10519030/v1",
+      "cited": 0,
+      "authors": "Liu Y, Li X, Yang X, Liu G, Hong C, Huang Y, Guan B, Wang X, Chao C, Luo Y."
      },
      {
       "title": "Arterial Stiffness and Geriatric Syndromes in Older Adults With Chronic Kidney Disease: A Cross-Sectional Study.",
@@ -4035,7 +4035,7 @@
   "S1_three_syndrome_count": {
    "query": "((\"geriatric syndrome\" OR \"geriatric syndromes\") AND (\"accumulation\" OR \"count\" OR \"burden\") AND dementia AND (cohort OR longitudinal)) AND (FIRST_PDATE:[2018-01-01 TO 2026-12-31])",
    "status": "OK",
-   "total": 184075,
+   "total": 184341,
    "top": [
     {
      "title": "",
@@ -4074,19 +4074,19 @@
      "authors": ""
     },
     {
-     "title": "Do we know all about Behavioral and Psychological Symptoms of Dementia?",
+     "title": "Thinking Ourselves Old",
      "journal": "Journal of Gerontology &amp; Geriatric Research",
-     "year": "2013",
-     "doi": "10.4172/2167-7182.1000e124",
+     "year": "2012",
+     "doi": "10.4172/2167-7182.1000e102",
      "cited": 0,
      "pmid": "",
      "authors": ""
     },
     {
-     "title": "Thinking Ourselves Old",
+     "title": "Do we know all about Behavioral and Psychological Symptoms of Dementia?",
      "journal": "Journal of Gerontology &amp; Geriatric Research",
-     "year": "2012",
-     "doi": "10.4172/2167-7182.1000e102",
+     "year": "2013",
+     "doi": "10.4172/2167-7182.1000e124",
      "cited": 0,
      "pmid": "",
      "authors": ""
@@ -4191,15 +4191,6 @@
      "authors": ""
     },
     {
-     "title": "Telemedicine",
-     "journal": "Journal of Gerontology &amp; Geriatric Research",
-     "year": "2012",
-     "doi": "10.4172/2167-7182.1000117",
-     "cited": 0,
-     "pmid": "",
-     "authors": ""
-    },
-    {
      "title": "Polypharmacy: A Risk Factor for Geriatric Syndrome, Morbidity &amp; Mortality",
      "journal": "Journal of Aging Science",
      "year": "2013",
@@ -4209,11 +4200,20 @@
      "authors": ""
     },
     {
-     "title": "Clinical Application of Benefit-Finding for Dementia Caregivers",
-     "journal": "The American Journal of Geriatric Psychiatry",
-     "year": "2018",
-     "doi": "10.1016/j.jagp.2018.09.011",
-     "cited": 3,
+     "title": "Telemedicine",
+     "journal": "Journal of Gerontology &amp; Geriatric Research",
+     "year": "2012",
+     "doi": "10.4172/2167-7182.1000117",
+     "cited": 0,
+     "pmid": "",
+     "authors": ""
+    },
+    {
+     "title": "Hopeful Care for People Dying with Dementia",
+     "journal": "Journal of Gerontology &amp; Geriatric Research",
+     "year": "2017",
+     "doi": "10.4172/2167-7182.1000378",
+     "cited": 0,
      "pmid": "",
      "authors": ""
     }
@@ -4222,7 +4222,7 @@
   "S2_dai_joint": {
    "query": "((disability OR \"functional limitation\") AND multimorbidity AND depression AND dementia AND (joint OR combined OR \"mutually exclusive\" OR \"all eight\" OR co-occurrence) AND cohort) AND (FIRST_PDATE:[2018-01-01 TO 2026-12-31])",
    "status": "OK",
-   "total": 11736,
+   "total": 11749,
    "top": [
     {
      "title": "Modelling the Mutually Exclusive Oncogenic Mechanism",
@@ -4360,11 +4360,11 @@
      "authors": ""
     },
     {
-     "title": "FTS4‐01‐01: OVERVIEW OF NIA‐AA RESEARCH FRAMEWORK",
+     "title": "EC‐01‐01: BRAIN STATE AND CLEARANCE FROM THE PARENCHYMA",
      "journal": "Alzheimer's &amp; Dementia",
      "year": "2018",
-     "doi": "10.1016/j.jalz.2018.06.2901",
-     "cited": 3,
+     "doi": "10.1016/j.jalz.2018.06.2325",
+     "cited": 0,
      "pmid": "",
      "authors": ""
     },
@@ -4378,11 +4378,11 @@
      "authors": ""
     },
     {
-     "title": "EC‐01‐01: BRAIN STATE AND CLEARANCE FROM THE PARENCHYMA",
+     "title": "FTS4‐01‐01: OVERVIEW OF NIA‐AA RESEARCH FRAMEWORK",
      "journal": "Alzheimer's &amp; Dementia",
      "year": "2018",
-     "doi": "10.1016/j.jalz.2018.06.2325",
-     "cited": 0,
+     "doi": "10.1016/j.jalz.2018.06.2901",
+     "cited": 3,
      "pmid": "",
      "authors": ""
     },
@@ -4409,7 +4409,7 @@
   "S3_harmonized_multi": {
    "query": "((CHARLS OR ELSA OR \"Health and Retirement Study\" OR HRS OR KLoSA OR MHAS OR SHARE OR \"Gateway to Global Aging\") AND dementia AND (frailty OR multimorbidity OR \"geriatric syndrome\" OR burden) AND (harmonized OR \"cross-cohort\" OR \"multi-cohort\")) AND (FIRST_PDATE:[2018-01-01 TO 2026-12-31])",
    "status": "OK",
-   "total": 3440,
+   "total": 3447,
    "top": [
     {
      "title": "Prospective association between cumulative average grip strength and successful aging: evidence from the CHARLS, ELSA and SHARE multi-cohort study",
@@ -4443,7 +4443,7 @@
      "journal": "International Journal of Epidemiology",
      "year": "2018",
      "doi": "10.1093/ije/dyy227",
-     "cited": 17,
+     "cited": 18,
      "pmid": "",
      "authors": ""
     },
@@ -4596,7 +4596,7 @@
   "S4_time_lagged": {
    "query": "(dementia AND (frailty OR multimorbidity OR disability OR \"geriatric syndrome\") AND (\"time-lagged\" OR \"lagged\" OR \"reverse causation\" OR \"reverse causality\" OR \"latency\" OR \"time-varying\") AND cohort) AND (FIRST_PDATE:[2018-01-01 TO 2026-12-31])",
    "status": "OK",
-   "total": 3201,
+   "total": 3206,
    "top": [
     {
      "title": "Reciprocal Relationships, Reverse Causality, and Temporal Ordering: Testing Theories with Cross-lagged Panel Models",
@@ -4662,20 +4662,20 @@
      "authors": ""
     },
     {
-     "title": "Time lagged information theoretic approaches to the reverse engineering of gene regulatory networks",
-     "journal": "BMC Bioinformatics",
-     "year": "2010",
-     "doi": "10.1186/1471-2105-11-s6-s19",
-     "cited": 32,
-     "pmid": "",
-     "authors": ""
-    },
-    {
      "title": "Continuous-Time Predictive-directional Association for Time-lagged Analysis of Finite-state Stochastic Dynamics",
      "journal": "",
      "year": "2026",
      "doi": "10.2139/ssrn.7370880",
      "cited": 0,
+     "pmid": "",
+     "authors": ""
+    },
+    {
+     "title": "Time lagged information theoretic approaches to the reverse engineering of gene regulatory networks",
+     "journal": "BMC Bioinformatics",
+     "year": "2010",
+     "doi": "10.1186/1471-2105-11-s6-s19",
+     "cited": 32,
      "pmid": "",
      "authors": ""
     },
@@ -4707,20 +4707,20 @@
      "authors": ""
     },
     {
-     "title": "Inferring Time-Lagged Causality Using the Derivative of Single-Cell Expression",
-     "journal": "International Journal of Molecular Sciences",
-     "year": "2022",
-     "doi": "10.3390/ijms23063348",
-     "cited": 3,
-     "pmid": "",
-     "authors": ""
-    },
-    {
      "title": "Decision letter for \"Stabilizing time-lagged climate impacts requires net-negative emissions for centuries\"",
      "journal": "",
      "year": "2026",
      "doi": "10.1088/1748-9326/ae34ca/v2/decision1",
      "cited": 0,
+     "pmid": "",
+     "authors": ""
+    },
+    {
+     "title": "Inferring Time-Lagged Causality Using the Derivative of Single-Cell Expression",
+     "journal": "International Journal of Molecular Sciences",
+     "year": "2022",
+     "doi": "10.3390/ijms23063348",
+     "cited": 3,
      "pmid": "",
      "authors": ""
     },
@@ -4734,20 +4734,20 @@
      "authors": ""
     },
     {
-     "title": "Widespread Time-Lagged and Cumulative Effects Modulate Climatic Controls on Ecosystem Water Use Efficiency ",
-     "journal": "",
-     "year": "2026",
-     "doi": "10.5194/egusphere-egu26-6580",
-     "cited": 0,
-     "pmid": "",
-     "authors": ""
-    },
-    {
      "title": "Time-lagged Ordered Lasso for network inference",
      "journal": "BMC Bioinformatics",
      "year": "2018",
      "doi": "10.1186/s12859-018-2558-7",
      "cited": 15,
+     "pmid": "",
+     "authors": ""
+    },
+    {
+     "title": "Widespread Time-Lagged and Cumulative Effects Modulate Climatic Controls on Ecosystem Water Use Efficiency ",
+     "journal": "",
+     "year": "2026",
+     "doi": "10.5194/egusphere-egu26-6580",
+     "cited": 0,
      "pmid": "",
      "authors": ""
     },
@@ -4783,7 +4783,7 @@
   "S5_mediation_dep": {
    "query": "(dementia AND depression AND (mediation OR \"mediated proportion\" OR \"indirect effect\" OR \"four-way decomposition\") AND (frailty OR multimorbidity OR disability)) AND (FIRST_PDATE:[2018-01-01 TO 2026-12-31])",
    "status": "OK",
-   "total": 10994,
+   "total": 11005,
    "top": [
     {
      "title": "Dementia, multimorbidity, and frailty",
@@ -4885,20 +4885,20 @@
      "authors": ""
     },
     {
-     "title": "EC‐01‐01: BRAIN STATE AND CLEARANCE FROM THE PARENCHYMA",
-     "journal": "Alzheimer's &amp; Dementia",
-     "year": "2018",
-     "doi": "10.1016/j.jalz.2018.06.2325",
-     "cited": 0,
-     "pmid": "",
-     "authors": ""
-    },
-    {
      "title": "FTS4‐01‐01: OVERVIEW OF NIA‐AA RESEARCH FRAMEWORK",
      "journal": "Alzheimer's &amp; Dementia",
      "year": "2018",
      "doi": "10.1016/j.jalz.2018.06.2901",
      "cited": 3,
+     "pmid": "",
+     "authors": ""
+    },
+    {
+     "title": "EC‐01‐01: BRAIN STATE AND CLEARANCE FROM THE PARENCHYMA",
+     "journal": "Alzheimer's &amp; Dementia",
+     "year": "2018",
+     "doi": "10.1016/j.jalz.2018.06.2325",
+     "cited": 0,
      "pmid": "",
      "authors": ""
     },
@@ -4921,19 +4921,19 @@
      "authors": ""
     },
     {
-     "title": "O2‐07–01: Unmarried life: Paving the way for dementia?",
+     "title": "F1‐01‐01: NEUROPATHOLOGIC HETEROGENEITY OF ALZHEIMER'S DISEASE AND RELATED DISORDERS",
      "journal": "Alzheimer's &amp; Dementia",
-     "year": "2008",
-     "doi": "10.1016/j.jalz.2008.05.358",
+     "year": "2018",
+     "doi": "10.1016/j.jalz.2018.06.2303",
      "cited": 0,
      "pmid": "",
      "authors": ""
     },
     {
-     "title": "F1‐01‐01: NEUROPATHOLOGIC HETEROGENEITY OF ALZHEIMER'S DISEASE AND RELATED DISORDERS",
+     "title": "O2‐07–01: Unmarried life: Paving the way for dementia?",
      "journal": "Alzheimer's &amp; Dementia",
-     "year": "2018",
-     "doi": "10.1016/j.jalz.2018.06.2303",
+     "year": "2008",
+     "doi": "10.1016/j.jalz.2008.05.358",
      "cited": 0,
      "pmid": "",
      "authors": ""
@@ -4970,7 +4970,7 @@
   "S6_trajectory": {
    "query": "(dementia AND (frailty OR multimorbidity OR \"geriatric syndrome\") AND (trajectory OR trajectories) AND (remitted OR reversal OR \"persistently\" OR \"changes in\")) AND (FIRST_PDATE:[2018-01-01 TO 2026-12-31])",
    "status": "OK",
-   "total": 148329,
+   "total": 148546,
    "top": [
     {
      "title": "Dementia, multimorbidity, and frailty",
@@ -5081,15 +5081,6 @@
      "authors": ""
     },
     {
-     "title": "Sarcopenia and Frailty: the detectable overlapping and the possible diagnostic approaches",
-     "journal": "Journal of Frailty, Sarcopenia and Falls",
-     "year": "2016",
-     "doi": "10.22540/jfsf-01-008",
-     "cited": 2,
-     "pmid": "",
-     "authors": ""
-    },
-    {
      "title": "S2‐01‐01: TAU PATHOLOGY OF ALZHEIMER'S DISEASE",
      "journal": "Alzheimer's &amp; Dementia",
      "year": "2018",
@@ -5104,6 +5095,15 @@
      "year": "2018",
      "doi": "10.1016/j.jalz.2018.06.2969",
      "cited": 0,
+     "pmid": "",
+     "authors": ""
+    },
+    {
+     "title": "Sarcopenia and Frailty: the detectable overlapping and the possible diagnostic approaches",
+     "journal": "Journal of Frailty, Sarcopenia and Falls",
+     "year": "2016",
+     "doi": "10.22540/jfsf-01-008",
+     "cited": 2,
      "pmid": "",
      "authors": ""
     },
@@ -5144,11 +5144,11 @@
      "authors": ""
     },
     {
-     "title": "B12 levels and frailty syndrome",
-     "journal": "Journal of Frailty, Sarcopenia and Falls",
-     "year": "2022",
-     "doi": "10.22540/jfsf-07-032",
-     "cited": 28,
+     "title": "S5‐01‐02: ASTROCYTES IN ALZHEIMER'S DISEASE: MOLECULAR CHANGES AND FUNCTIONAL CONSEQUENCES",
+     "journal": "Alzheimer's &amp; Dementia",
+     "year": "2018",
+     "doi": "10.1016/j.jalz.2018.06.2965",
+     "cited": 0,
      "pmid": "",
      "authors": ""
     }
@@ -5157,7 +5157,7 @@
   "S7_asia_latam": {
    "query": "(dementia AND (China OR Chinese OR Mexico OR Mexican OR Korea OR Korean) AND (frailty OR multimorbidity OR disability) AND (cohort OR longitudinal OR \"nationally representative\")) AND (FIRST_PDATE:[2018-01-01 TO 2026-12-31])",
    "status": "OK",
-   "total": 14524,
+   "total": 14578,
    "top": [
     {
      "title": "Associations of Multimorbidity with Body Pain, Sleep Duration, and Depression Among Middle-Aged and Older Adults in China: A Nationally Representative Longitudinal Cohort Study",
@@ -5344,7 +5344,7 @@
   "S8_minimal_index_practical": {
    "query": "(dementia AND (frailty OR multimorbidity OR disability) AND (screening OR \"risk stratification\" OR \"primary care\" OR \"routine assessment\") AND \"older adults\") AND (FIRST_PDATE:[2018-01-01 TO 2026-12-31])",
    "status": "OK",
-   "total": 46635,
+   "total": 46729,
    "top": [
     {
      "title": "S5–01–01: Dementia assessment in primary care",
@@ -5383,6 +5383,15 @@
      "authors": ""
     },
     {
+     "title": "Frailty screening in older adults: is annual screening necessary in primary care?",
+     "journal": "Family Practice",
+     "year": "2021",
+     "doi": "10.1093/fampra/cmab055",
+     "cited": 3,
+     "pmid": "",
+     "authors": ""
+    },
+    {
      "title": "Frailty and Disability in Older Adults",
      "journal": "The Palgrave Encyclopedia of Disability",
      "year": "2025",
@@ -5392,10 +5401,10 @@
      "authors": ""
     },
     {
-     "title": "Frailty screening in older adults: is annual screening necessary in primary care?",
-     "journal": "Family Practice",
-     "year": "2021",
-     "doi": "10.1093/fampra/cmab055",
+     "title": "Frailty in Relation to Cognition in Community‐Dwelling Older Adults: Validating the Electronic Frailty Index based on the Comprehensive Geriatric Assessment (eFI‐CGA) in Primary Care",
+     "journal": "Alzheimer's &amp; Dementia",
+     "year": "2023",
+     "doi": "10.1002/alz.064789",
      "cited": 3,
      "pmid": "",
      "authors": ""
@@ -5410,11 +5419,11 @@
      "authors": ""
     },
     {
-     "title": "Frailty in Relation to Cognition in Community‐Dwelling Older Adults: Validating the Electronic Frailty Index based on the Comprehensive Geriatric Assessment (eFI‐CGA) in Primary Care",
+     "title": "O1‐07‐01: VALIDATION OF A DEMENTIA SCREENING INDICATOR IN OLDER ADULTS IN THE NHANES EPIDEMIOLOGIC FOLLOW‐UP STUDY",
      "journal": "Alzheimer's &amp; Dementia",
-     "year": "2023",
-     "doi": "10.1002/alz.064789",
-     "cited": 3,
+     "year": "2018",
+     "doi": "10.1016/j.jalz.2018.06.2366",
+     "cited": 0,
      "pmid": "",
      "authors": ""
     },
@@ -5424,15 +5433,6 @@
      "year": "2025",
      "doi": "10.1186/s12875-025-02996-7",
      "cited": 1,
-     "pmid": "",
-     "authors": ""
-    },
-    {
-     "title": "O1‐07‐01: VALIDATION OF A DEMENTIA SCREENING INDICATOR IN OLDER ADULTS IN THE NHANES EPIDEMIOLOGIC FOLLOW‐UP STUDY",
-     "journal": "Alzheimer's &amp; Dementia",
-     "year": "2018",
-     "doi": "10.1016/j.jalz.2018.06.2366",
-     "cited": 0,
      "pmid": "",
      "authors": ""
     },

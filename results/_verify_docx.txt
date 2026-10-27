@@ -269,7 +269,7 @@
 [P] Informed Consent Statement
 [P] Informed consent was obtained from all participants by the original cohort studies. Patient consent for this secondary analysis was waived because only de-identified public-use data were analysed.
 [P] Data Availability Statement
-[P] The harmonized datasets analysed in this study are available to registered researchers from the Gateway to Global Aging Data (https://g2aging.org) and from each cohort’s own data repository: CHARLS, ELSA, HRS, KLoSA, MHAS and SHARE. The analysis code that reproduces every number, table and figure is available from the corresponding author on reasonable request and will be deposited in a public repository with a DOI.
+[P] The harmonized datasets analysed in this study are available to registered researchers from the Gateway to Global Aging Data (https://g2aging.org) and from each cohort’s own data repository: CHARLS, ELSA, HRS, KLoSA, MHAS and SHARE; no participant-level data are redistributed here. The analysis code that reproduces every number, table and figure is openly available at https://github.com/qingcaimiao/DEM-DAI and archived on Zenodo at https://doi.org/10.5281/zenodo.23356045.
 [P] Acknowledgments
 [P] This analysis uses data from the Gateway to Global Aging Data and from CHARLS, ELSA, HRS, KLoSA, MHAS and SHARE. The authors thank the study teams and the respondents of these cohorts, and the Gateway to Global Aging Data for its harmonization documentation. During the preparation of this manuscript, the authors used AI-assisted tools for code generation, statistical analysis support and language editing; the authors have reviewed and edited the output and take full responsibility for the content of this publication.
 [P] Conflicts of Interest
